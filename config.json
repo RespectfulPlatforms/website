@@ -10,6 +10,11 @@
       "name": "Français",
       "flag": "🇫🇷",
       "path": "/lang/fr/"
+    },
+    "pl": {
+      "name": "Polski",
+      "flag": "🇵🇱",
+      "path": "/lang/pl/"
     }
   },
   "site": {
