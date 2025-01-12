@@ -1,0 +1,19 @@
+{
+  "languages": {
+    "en": {
+      "name": "English",
+      "flag": "🇬🇧",
+      "path": "/",
+      "isDefault": true
+    },
+    "fr": {
+      "name": "Français",
+      "flag": "🇫🇷",
+      "path": "/lang/fr/"
+    }
+  },
+  "site": {
+    "name": "RespectfulPlatforms.org - Digital Platform Charter of Rights",
+    "defaultLang": "en"
+  }
+}
