@@ -59,6 +59,37 @@
         <div id="articles" class="space-y-6">
         </div>
 
+        <section id="pledged-orgs" class="my-16">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-6">Organizations That Have Pledged</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="org-grid">
+                <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pixelfed</h3>
+                            <p class="text-sm text-gray-600">Pledged on Jan 11, 2025</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="https://pixelfed.org"
+                              target="_blank">
+                            Website
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">
+                        "As a founding signatory, Pixelfed built these principles directly into our federated photo-sharing platform's architecture, with privacy-first design, no tracking, and federation at its core."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pledge-form" class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
+            <h2 class="text-2xl font-bold mb-6 dark:text-slate-50">Take the Pledge</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mb-6">
+                By pledging, your organization commits to implementing and upholding these principles.
+                To apply, please send an email from your ethical organization with your website, and a statement about the pledge to <a href="mailto:pledge@pixelfed.org" target="_blank" class="font-bold">pledge@pixelfed.org</a>. All pledges are reviewed before being publicly listed. 
+            </p>
+        </section>
+
         <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
             <p class="text-center text-gray-600 dark:text-slate-300 text-sm">
                 This Charter is a living document, subject to regular review and amendment 
@@ -239,7 +270,11 @@
                   }
               ]
           }
-      ];
+        ];
+
+        const pledges = [
+            // add here
+        ];
 
         function createArticleElement(article, index) {
             const articleElement = document.createElement('div');
@@ -283,6 +318,30 @@
             return articleElement;
         }
 
+        function displayPledges() {
+            const grid = document.getElementById('org-grid');
+            pledges.forEach(pledge => {
+                const pledgeEl = document.createElement('div');
+                pledgeEl.className = 'bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800';
+                pledgeEl.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">${pledge.name}</h3>
+                            <p class="text-sm text-gray-600">Pledged on ${pledge.date}</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="${pledge.website}"
+                              target="_blank">
+                            Website
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">${pledge.statement}</p>
+                `;
+                grid.appendChild(pledgeEl);
+            });
+        }
+
         function initializeCharter() {
             const articlesContainer = document.getElementById('articles');
             articles.forEach((article, index) => {
@@ -290,7 +349,10 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', initializeCharter);
+        document.addEventListener('DOMContentLoaded', function() {
+          initializeCharter();
+          displayPledges();
+        });
     </script>
 </body>
 </html>
