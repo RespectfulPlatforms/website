@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RespectfulPlatforms.org - Хартия о правах на цифровых платформах</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/languagePicker.js"></script>
+    <style>
+        .article-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .article-content.expanded {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        .chevron.expanded {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 dark:bg-slate-950">
+    <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+        <div id="language-picker-container" class="w-full flex justify-end p-2"></div>
+        <div class="max-w-4xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-center mb-6">
+                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <path d="M14 2v6h6"/>
+                    <path d="M16 13H8"/>
+                    <path d="M16 17H8"/>
+                    <path d="M10 9H8"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-serif text-center text-gray-900 dark:text-slate-50 mb-4">
+                Хартия о правах на цифровых платформах
+            </h1>
+            <p class="text-center text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
+                Декларация основных прав и принципов для этичных цифровых платформ, обеспечивающих 
+              неприкосновенность частной жизни, достоинство и справедливость в онлайн-пространстве. 
+            </p>
+        </div>
+    </header>
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="prose prose-blue max-w-none mb-12">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-4">Преамбула</h2>
+            <p class="text-gray-600 leading-relaxed dark:text-slate-300">
+                Мы, архитекторы и администраторы цифровых платформ, признаем фундаментальные права всех пользователей 
+              на пребывание в онлайн-пространстве, где уважается их частная жизнь, достоинство и благополучие. Настоящая 
+              Хартия устанавливает принципы и стандарты, которые должны регулировать разработку и 
+              функционирование этичных цифровых платформ. 
+            </p>
+        </div>
+
+        <div id="articles" class="space-y-6">
+        </div>
+
+        <section id="pledged-orgs" class="my-16">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-6">Организации, принявшие Хартию</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="org-grid">
+                <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pixelfed</h3>
+                            <p class="text-sm text-gray-600">Приняла 11 января, 2025</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="https://pixelfed.org"
+                              target="_blank">
+                            Веб-сайт
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">
+                        «Будучи одним из основателей, Pixelfed включила эти принципы непосредственно в архитектуру нашей 
+                      платформы для совместного использования фотографий, в основе которой лежат принципы конфиденциальности, 
+                      отсутствия слежки и переносимости данных». 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pledge-form" class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
+            <h2 class="text-2xl font-bold mb-6 dark:text-slate-50">Примите обязательство</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mb-6">
+                Приняв обязательство, ваша организация обязуется внедрять и соблюдать эти принципы. Чтобы подать заявку, 
+              отправьте письмо от вашей этической организации с указанием вашего веб-сайта и заявлением о принятии 
+              обязательств на адрес <a href="mailto:pledge@pixelfed.org" target="_blank" class="font-bold">pledge@pixelfed.org</a>. 
+              Все заявки проходят проверку перед тем, как попасть в открытый список. 
+            </p>
+        </section>
+
+        <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
+            <p class="text-center text-gray-600 dark:text-slate-300 text-sm">
+                Эта Хартия - <a href="https://github.com/RespectfulPlatforms/website" class="font-bold" target="_blank">живой документ</a>, 
+              подлежащий регулярному пересмотру и изменению на основе консультаций с сообществом и развивающихся этических стандартов в 
+              цифровом пространстве. Создана разработчиками <a href="https://fediverse.info" class="font-bold">Fediverse</a>.
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        const articles = [
+          {
+              title: "Право на конфиденциальность",
+              principles: [
+                  {
+                      title: "Сокращение объема данных",
+                      description: "Собираются только те данные, которые необходимы для работы основных функций. Платформы должны обосновать необходимость каждой собранной единицы данных."
+                  },
+                  {
+                      title: "Активное согласие",
+                      description: "Пользователи должны дать осознанное согласие на сбор, хранение или передачу третьим лицам любых персональных данных. Согласие должно быть свободно выраженным, конкретным и подлежащим отзыву"
+                  },
+                  {
+                      title: "Конфиденциальность по умолчанию",
+                      description: "Функции и обновления платформы разрабатываются с учетом конфиденциальности пользователей, что позволяет предотвратить ненужное раскрытие данных."
+                  }
+              ]
+          },
+          {
+              title: "Свобода от слежки",
+              principles: [
+                  {
+                      title: "Никакой слежки без согласия",
+                      description: "За пользователями не ведется тайное наблюдение или слежка через Интернет. Любая форма отслеживания должна быть открыто раскрыта и на нее должно быть получено согласие."
+                  },
+                  {
+                      title: "Понятная ситуация",
+                      description: "Если аналитика или отслеживание используются (для безопасности, предотвращения спама или отладки), они прозрачно документируются и имеют ограниченный охват."
+                  },
+                  {
+                      title: "Контролируемая пользователем видимость",
+                      description: "Пользователи могут легко настроить параметры видимости своих профилей и контента, чтобы управлять своей приватностью."
+                  }
+              ]
+          },
+          {
+              title: "Защита от языка ненависти",
+              principles: [
+                  {
+                      title: "Политика нулевой терпимости",
+                      description: "Политика прямо запрещает язык ненависти, домогательства и целенаправленное насилие, а меры по модерации принимаются быстро и прозрачно."
+                  },
+                  {
+                      title: "Удобная система отчетности",
+                      description: "Простая и доступная система позволяет пользователям отмечать вредоносный контент для проверки."
+                  },
+                  {
+                      title: "Четкие стандарты сообщества",
+                      description: "Четкие определения и примеры вредоносного контента публикуются в открытом доступе, чтобы пользователи понимали, что является допустимым, а что нет."
+                  }
+              ]
+          },
+          {
+              title: "Надежная защита уязвимых сообществ",
+              principles: [
+                  {
+                      title: "Инклюзивная политика модерирования",
+                      description: "Команды модераторов обучены распознавать и устранять контент, направленный против расы, этнической принадлежности, пола, сексуальной ориентации, инвалидности, религии или других маргинализированных идентичностей."
+                  },
+                  {
+                      title: "Интерсекциональный подход",
+                      description: "Правила и протоколы исполнения учитывают особенно уязвимые группы на пересечения маргинализированных идентичностей."
+                  },
+                  {
+                      title: "Отзывчивая поддержка",
+                      description: "Для пользователей существуют специальные каналы для быстрого обращени, если они чувствуют угрозу или опасность на платформе."
+                  }
+              ]
+          },
+          {
+              title: "Переносимость данных и агентность пользователя",
+              principles: [
+                  {
+                      title: "Лёгкий экспорт",
+                      description: "Пользователи имеют право в любое время загружать или экспортировать свои данные в доступном формате."
+                  },
+                  {
+                      title: "Право на удаление",
+                      description: "По запросу пользователя его данные будут удалены с платформы навсегда, за исключением случаев, предусмотренных законом или требованиями безопасности."
+                  },
+                  {
+                      title: "Децентрализация и взаимодействие",
+                      description: "По возможности платформа поддерживает открытые протоколы и стандарты, чтобы пользователи могли свободно мигрировать и подключаться к различным сервисам."
+                  }
+              ]
+          },
+          {
+              title: "Прозрачность и подотчётность",
+              principles: [
+                  {
+                      title: "Открытое администрирование",
+                      description: "Политика платформы и процессы управления являются открытыми, с регулярными консультациями и надзором со стороны сообщества."
+                  },
+                  {
+                      title: "Публичные дорожные карты",
+                      description: "Изменения в политике или технологии платформы делаются публично, и заинтересованные стороны могут оставлять свои комментарии или предлагать изменения."
+                  },
+                  {
+                      title: "Независимый взгляд",
+                      description: "Беспристрастный орган или консультативная группа могут проводить аудит или проверку практики модерации и обработки данных, чтобы убедиться в том, что она соответствует высоким этическим стандартам."
+                  }
+              ]
+          },
+          {
+              title: "Безопасность и благополучие",
+              principles: [
+                  {
+                      title: "Предупреждения о содержании и инструменты модерации",
+                      description: "Надежные инструменты позволяют пользователям оградить себя от раздражающего или вредного контента с помощью предупреждений и списков фильтров.."
+                  },
+                  {
+                      title: "Ресурсы психического здоровья",
+                      description: "Платформа делится ресурсами и горячими линиями для поддержки психического здоровья, чтобы способствовать созданию более здоровой онлайн-среды."
+                  },
+                  {
+                      title: "Предотвращение вреда в сети",
+                      description: "Проактивные меры, такие как ограничения на активность и продуманное ограничения, противодействуют созданию аддиктивных паттернов, спама и абьюзивного поведения."
+                  }
+              ]
+          },
+          {
+              title: "Справедливость в алгоритмических системах",
+              principles: [
+                  {
+                      title: "Прозрачные алгоритмы",
+                      description: "Если лента или результаты поиска подвергаются алгоритмическому контролю, пользователи должны получать понятные объяснения ключевых факторов ранжирования."
+                  },
+                  {
+                      title: "Возможность отказаться от участия",
+                      description: "Пользователи могут выбрать хронологическую ленту или другой упрощенный вид, если они не хотят работать с алгоритмическими рекомендациями."
+                  },
+                  {
+                      title: "Уменьшение предвзятости",
+                      description: "Регулярные проверки позволяют убедиться в том, что алгоритмы не понижают и не повышают контент с определёнными характеристиками."
+                  }
+              ]
+          },
+          {
+              title: "Инклюзивное сообщество и управление",
+              principles: [
+                  {
+                      title: "Справедливое представление интересов",
+                      description: "Правила и руководство сообщества должны отражать разные мнения и опыт."
+                  },
+                  {
+                      title: "Языковая доступность",
+                      description: "Основные правила, руководства по оказанию помощи и рекомендации по модерированию доступны на нескольких языках, если позволяют ресурсы."
+                  },
+                  {
+                      title: "Совместное формирование политики",
+                      description: "Пользователям предлагается принять участие в обсуждении политики и помочь в дальнейшем развитии платформы."
+                  }
+              ]
+          },
+          {
+              title: "Постоянные развитие и эволюция",
+              principles: [
+                  {
+                      title: "Периодические обзоры",
+                      description: "Хартия о правах, политика и стратегии реализации регулярно пересматриваются и обновляются с учетом меняющихся социальных и технологических условий."
+                  },
+                  {
+                      title: "Обратная связь от сообщества",
+                      description: "Существуют механизмы, позволяющие пользователям оставлять свои отзывы, предложения или замечания, что гарантирует, что платформа будет оставаться отзывчивой к своему сообществу."
+                  },
+                  {
+                      title: "Разделенная ответственность",
+                      description: "Все участники - пользователи, сопровождающие и внешние контрибьюторы - разделяют ответственность за соблюдение этих принципов."
+                  }
+              ]
+          }
+        ];
+
+        const pledges = [
+            // add here
+        ];
+
+        function createArticleElement(article, index) {
+            const articleElement = document.createElement('div');
+            articleElement.className = 'mb-8 bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-600 overflow-hidden';
+            
+            const articleHTML = `
+                <button class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-600 hover:bg-gray-100 hover:dark:bg-slate-700 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-50 flex items-center justify-center font-serif">
+                            ${index + 1}
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-900 dark:text-slate-300">${article.title}</h3>
+                    </div>
+                    <svg class="chevron w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="article-content">
+                    <div class="px-6 py-4">
+                        ${article.principles.map(principle => `
+                            <div class="mb-10 last:mb-0">
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-50 mb-2">${principle.title}</h4>
+                                <p class="text-gray-600 leading-relaxed dark:text-slate-300">${principle.description}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            articleElement.innerHTML = articleHTML;
+            
+            const button = articleElement.querySelector('button');
+            const content = articleElement.querySelector('.article-content');
+            const chevron = articleElement.querySelector('.chevron');
+            
+            button.addEventListener('click', () => {
+                content.classList.toggle('expanded');
+                chevron.classList.toggle('expanded');
+            });
+            
+            return articleElement;
+        }
+
+        function displayPledges() {
+            const grid = document.getElementById('org-grid');
+            pledges.forEach(pledge => {
+                const pledgeEl = document.createElement('div');
+                pledgeEl.className = 'bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800';
+                pledgeEl.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">${pledge.name}</h3>
+                            <p class="text-sm text-gray-600">Pledged on ${pledge.date}</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="${pledge.website}"
+                              target="_blank">
+                            Website
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">${pledge.statement}</p>
+                `;
+                grid.appendChild(pledgeEl);
+            });
+        }
+
+        function initializeCharter() {
+            const articlesContainer = document.getElementById('articles');
+            articles.forEach((article, index) => {
+                articlesContainer.appendChild(createArticleElement(article, index));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          initializeCharter();
+          displayPledges();
+        });
+    </script>
+</body>
+</html>
