@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RespectfulPlatforms.org - Carta de Derechos de la Plataforma Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/languagePicker.js"></script>
+    <style>
+        .article-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .article-content.expanded {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        .chevron.expanded {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 dark:bg-slate-950">
+    <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+        <div id="language-picker-container" class="w-full flex justify-end p-2"></div>
+        <div class="max-w-4xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-center mb-6">
+                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <path d="M14 2v6h6"/>
+                    <path d="M16 13H8"/>
+                    <path d="M16 17H8"/>
+                    <path d="M10 9H8"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-serif text-center text-gray-900 dark:text-slate-50 mb-4">
+                Carta de Derechos de la Plataforma Digital
+            </h1>
+            <p class="text-center text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
+                Una declaración de derechos fundamentales y principios para las plataformas digitales éticas,
+                que garanticen la privacidad, la dignidad y la equidad en los espacios en línea.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="prose prose-blue max-w-none mb-12">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-4">Preámbulo</h2>
+            <p class="text-gray-600 leading-relaxed dark:text-slate-300">
+                Nosotros, los arquitectos y administradores de las plataformas digitales reconocemos los derechos
+                fundamentales de todos los usuarios para participar en espacios en línea que respeten su privacidad,
+                dignidad, y bienestar. Esta Carta establece que los principios y estándares que deberían gobernar
+                el desarrollo y operación de plataformas digitales éticas.
+            </p>
+        </div>
+
+        <div id="articles" class="space-y-6">
+        </div>
+
+        <section id="pledged-orgs" class="my-16">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-6">Organizaciones que se han comprometido</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="org-grid">
+                <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pixelfed</h3>
+                            <p class="text-sm text-gray-600">Comprometido el 11 de enero de 2025</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="https://pixelfed.org"
+                              target="_blank">
+                            Sitio web
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">
+                        "Como signatario fundador, Pixelfed incorporó estos principios directamente en la arquitectura de nuestra plataforma federada para compartir fotografías, con un diseño que prioriza la privacidad, sin seguimiento y portabilidad de datos en su núcleo".
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pledge-form" class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
+            <h2 class="text-2xl font-bold mb-6 dark:text-slate-50">Haz el compromiso</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mb-6">
+                Al comprometerte, tu organización se compromete a implementar y mantener estos principios.
+                Para aplicar, por favor envía un correo electrónico desde tu organización ética con tu sitio web, y una declaración sobre el compromiso a <a href="mailto:pledge@pixelfed.org" target="_blank" class="font-bold">pledge@pixelfed.org</a>. Todos los compromisos son revisados antes de enlistarse públicamente.
+            </p>
+        </section>
+
+        <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
+            <p class="text-center text-gray-600 dark:text-slate-300 text-sm">
+                Esta Carta es un <a href="https://github.com/RespectfulPlatforms/website" class="font-bold" target="_blank">documento vivo</a>, sujeto a revisión y enmienda periódica a través de
+                consulta comunitaria y estándares éticos en evolución en los espacios digitales. Creado por desarrolladores del <a href="https://fediverse.info" class="font-bold">fediverso</a>.
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        const articles = [
+          {
+              title: "Derecho a la Privacidad",
+              principles: [
+                  {
+                      title: "Minimización de los Datos",
+                      description: "Sólo se recolectan los datos necesarios para el funcionamiento del núcleo. Las plataformas deben justificar la necesidad de cada dato recopilado."
+                  },
+                  {
+                      title: "Consentimiento Explícito",
+                      description: "Los usuarios deben dar su consentimiento informado antes de que se recopile, almacene o comparta algún dato personal a un tercero. El consentimiento debe ser dado libremente, específico y revocable."
+                  },
+                  {
+                      title: "Privacidad por Diseño",
+                      description: "Las características de la platafomra y las actualizaciones serán desarrolladas con la privacidad del usuario por defecto, previniendo la exposición de datos innecesaria."
+                  }
+              ]
+          },
+          {
+              title: "Protección Contra la Vigilancia",
+              principles: [
+                  {
+                      title: "Sin Rastreo No Consensuado",
+                      description: "Los usuarios no serán secretamente monitorizados o rastreados a través del internet. Cualquier forma de ratreo debe ser divulgada y consentida explícitamente."
+                  },
+                  {
+                      title: "Supervisión Clara",
+                      description: "Si se utilizan análisis o seguimiento (para seguridad, prevención de SPAM o depuración), se documenta transparentemente y su alcance es limitado."
+                  },
+                  {
+                      title: "Visibilidad Controlada por el Usuario",
+                      description: "Los usuarios podrán ajustar fácilmente los ajustes de visibilidad de sus perfiles y contenido para manejar su propia privacidad."
+                  }
+              ]
+          },
+          {
+              title: "Protección Contra el Discurso de Odio",
+              principles: [
+                  {
+                      title: "Política de Tolerancia Cero",
+                      description: "Las políticas prohíben explícitamente el discurso de odio, el acoso y la violencia dirigida, con acciones de moderación rápidas y transparentes."
+                  },
+                  {
+                      title: "Sistema de Reporte Accesible",
+                      description: "Un sistema simple y accesible que permita a los usuarios marcar contenido dañino para su revisión."
+                  },
+                  {
+                      title: "Normas Comunitarias Claras",
+                      description: "Las definiciones claras y los ejemplos de contenido dañino serán publicados públicamente, así los usuarios entenderán lo que está y no está permitido."
+                  }
+              ]
+          },
+          {
+              title: "Fuerte Protección para las Comunidades Vulnerables",
+              principles: [
+                  {
+                      title: "Políticas de Moderación Inclusivas",
+                      description: "Los equipos de moderación serán entrenados para reconocer y abordar el contenido dirigido a la raza, étnia, género, orientación sexual, discapacidad, religión u otras identidade marginalizadas."
+                  },
+                  {
+                      title: "Enfoque Interseccional",
+                      description: "Las reglas y los protocolos de aplicación consideran vulnerabilidades superpuestas que amplifican los impactos dañinos."
+                  },
+                  {
+                      title: "Soporte Receptivo",
+                      description: "Existirán canales dedicados a usuarios para que se comuniquen rápidamente si se sienten amenazados o inseguros en la plataforma."
+                  }
+              ]
+          },
+          {
+              title: "Portabilidad de Datos y Autonomía del Usuario",
+              principles: [
+                  {
+                      title: "Fácil Exportación",
+                      description: "Los usuarios tendrán el derecho de descargar o exportar sus datos en cualquier momento en un formato común."
+                  },
+                  {
+                      title: "Derecho a la Eliminación",
+                      description: "Previa solicitud, los datos del usuario serán eliminados permanentemente de la plataforma, sujeto a excepciones legales o de seguridad."
+                  },
+                  {
+                      title: "Decentralizado e Interoperable",
+                      description: "Siempre que sea posible, la plataforma soportará protocolos y estándares abiertos para permitir la libertad de los usuarios de migrar y conectarse a través de diferentes servicios."
+                  }
+              ]
+          },
+          {
+              title: "Transparencia y Responsabilidad",
+              principles: [
+                  {
+                      title: "Gobernanza Abierta",
+                      description: "Las políticas de la plataforma y los procesos de gobernanza serán abiertos, con vigilancia y consultas comunitarias periódicas."
+                  },
+                  {
+                      title: "Hojas de Ruta Públicas",
+                      description: "Los cambios a la tecnología o las políticas de la plataforma se harán públicas, y las partes interesadas podrán comentar o proponer modificaciones."
+                  },
+                  {
+                      title: "Vigilancia Independiente",
+                      description: "Un cuerpo imparcial o un grupo asesor podrá auditar o revisar prácticas de moderación y manejo de datos para garantizar que cumplan con altos estándares éticos."
+                  }
+              ]
+          },
+          {
+              title: "Seguridad y Bienestar",
+              principles: [
+                  {
+                      title: "Advertencias de Contenido y Herramientas de Moderación",
+                      description: "Herramientas sólidas permitirán a los usuarios protegerse del contenido perturbador o dañino mediante advertencias de contenido y listas de filtros."
+                  },
+                  {
+                      title: "Recursos de Salud Mental",
+                      description: "La plataforma compartirá recursos y líneas directas de apoyo a la salud mental para fomentar un entorno en línea más saludable."
+                  },
+                  {
+                      title: "Prevención del Daño Digital",
+                      description: "Medidas proactivas como límites de tarifas y fricciones reflexivas que contrarresten los patrones adictivos, el SPAM y el abuso."
+                  }
+              ]
+          },
+          {
+              title: "Imparcialidad en Sistemas Algorítmicos",
+              principles: [
+                  {
+                      title: "Cronologías Explicables",
+                      description: "Si una cronología o los resultados de búsqueda se seleccionan algorítmicamente, los usuarios merecerán explicaciones entendibles de los factores clave de clasificación."
+                  },
+                  {
+                      title: "Opción de Exclusión Voluntaria",
+                      description: "Los usuarios podrán seleccionar una cronología u otra vista simplificada si no desean participar en recomendaciones algorítmicas."
+                  },
+                  {
+                      title: "Mitigación de sesgos",
+                      description: "Las auditorías periódicas garantizarán que el algorítmo no suprima ni amplifique desproporcionadamente el contenido basándose en características protegidas."
+                  }
+              ]
+          },
+          {
+              title: "Gobernanza y Comunidad Inclusiva",
+              principles: [
+                  {
+                      title: "Representación Equitativa",
+                      description: "Las reglas y el liderazgo comunitario deben reflejar voces y experiencias diversas."
+                  },
+                  {
+                      title: "Accesibilidad Lingüística",
+                      description: "Las políticas clave, las guías de ayuda y las guías de moderación estarán disponibles en múltiples idiomas como lo permitan los recursos."
+                  },
+                  {
+                      title: "Desarrollo de Políticas Colaborativas",
+                      description: "Los usuarios serán animados a participar en las discusiones de políticas y a ayudar a dar forma a la evolución continua de la plataforma."
+                  }
+              ]
+          },
+          {
+              title: "Evolución y Mejoras Continuas",
+              principles: [
+                  {
+                      title: "Revisión Periódica",
+                      description: "La Declaración de Derechos, políticas e implementación de estratégias serán revisados periódicamente y actualizados para adaptarse a los cambiantes panoramas sociales y tecnológicos."
+                  },
+                  {
+                      title: "Comentarios de la Comunidad",
+                      description: "Existirán mecanismos para que los usuarios envíen sus comentarios, sugerencias o preocupaciones, garantizando que la plataforma siga respondiendo a su comunidad."
+                  },
+                  {
+                      title: "Responsabilidad Compartida",
+                      description: "Todos los participantes -usuarios, mantenedores y contribuidores externos- compartirán la responsabilidad de mantener estos principios."
+                  }
+              ]
+          }
+        ];
+
+        const pledges = [
+            // add here
+        ];
+
+        function createArticleElement(article, index) {
+            const articleElement = document.createElement('div');
+            articleElement.className = 'mb-8 bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-600 overflow-hidden';
+            
+            const articleHTML = `
+                <button class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-600 hover:bg-gray-100 hover:dark:bg-slate-700 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-50 flex items-center justify-center font-serif">
+                            ${index + 1}
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-900 dark:text-slate-300">${article.title}</h3>
+                    </div>
+                    <svg class="chevron w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="article-content">
+                    <div class="px-6 py-4">
+                        ${article.principles.map(principle => `
+                            <div class="mb-10 last:mb-0">
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-50 mb-2">${principle.title}</h4>
+                                <p class="text-gray-600 leading-relaxed dark:text-slate-300">${principle.description}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            articleElement.innerHTML = articleHTML;
+            
+            const button = articleElement.querySelector('button');
+            const content = articleElement.querySelector('.article-content');
+            const chevron = articleElement.querySelector('.chevron');
+            
+            button.addEventListener('click', () => {
+                content.classList.toggle('expanded');
+                chevron.classList.toggle('expanded');
+            });
+            
+            return articleElement;
+        }
+
+        function displayPledges() {
+            const grid = document.getElementById('org-grid');
+            pledges.forEach(pledge => {
+                const pledgeEl = document.createElement('div');
+                pledgeEl.className = 'bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800';
+                pledgeEl.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">${pledge.name}</h3>
+                            <p class="text-sm text-gray-600">Pledged on ${pledge.date}</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="${pledge.website}"
+                              target="_blank">
+                            Website
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">${pledge.statement}</p>
+                `;
+                grid.appendChild(pledgeEl);
+            });
+        }
+
+        function initializeCharter() {
+            const articlesContainer = document.getElementById('articles');
+            articles.forEach((article, index) => {
+                articlesContainer.appendChild(createArticleElement(article, index));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          initializeCharter();
+          displayPledges();
+        });
+    </script>
+</body>
+</html>
