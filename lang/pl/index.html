@@ -172,7 +172,7 @@
               ]
           },
           {
-              title: "Przenośne Dane i Sprawczość Użytkownika",
+              title: "Mobilność Danych i Sprawczość Użytkownika",
               principles: [
                   {
                       title: "Łatwy Eksport",
@@ -219,6 +219,23 @@
                   {
                       title: "Zapobieganie Szkodom Cyfrowym",
                       description: "Proaktywne środki, takie jak limity częstotliwości i przemyślane ograniczenia, przeciwdziałają uzależniającym wzorcom, spamowi i nadużyciom."
+                  }
+              ]
+          },
+          {
+              title: "Przejrzysta Polityka Cyberbezpieczeństwa",
+              principles: [
+                  {
+                      title: "Przejrzystość Polityki Bezpieczeństwa",
+                      description: "Regularna publikacja - co najmniej raz w roku - praktyk bezpieczeństwa, wdrożonych zabezpieczeń, umożliwiająca użytkownikom podejmowanie świadomych decyzji dotyczących wiarygodności platformy."
+                  },
+                  {
+                      title: "Ujawnianie Incydentów",
+                      description: "Incydenty bezpieczeństwa wpływające na dane użytkownika lub integralność platformy muszą być niezwłocznie ujawniane wszystkim użytkownikom, których dotyczą, z jasną oceną wpływu."
+                  },
+                  {
+                      title: "Publiczna Analiza Powypadkowa",
+                      description: "Szczegółowe raporty z analizy powypadkowej są publikowane dla wszystkich incydentów bezpieczeństwa i nieplanowanych przestojów, wyjaśniając przyczyny źródłowe, kroki naprawcze i środki zapobiegawcze wdrożone w celu zapobiegania przyszłym zdarzeniom."
                   }
               ]
           },
@@ -276,7 +293,12 @@
         ];
 
         const pledges = [
-            // add here
+            {
+              name: "NextGraph.org",
+              date: "13 stycznia 2025",
+              website: "https://NextGraph.org",
+              statement: "NextGraph.org jest u swoich podstaw zaangażowany w mobilność danych, a nawet wykracza poza samą federalność, tworząc prawdziwie zdecentralizowaną sieć. Gwarantuje to doskonałą prywatność, ponieważ wszystko jest szyfrowane metodą od końca do końca (E2E). Nadchodzące prace nad wdrożeniem platformy społecznościowej, które zaplanowaliśmy, będą zgodne z zasadami wymienionymi w Karcie Praw Platformy Cyfrowej, ponieważ zdecydowanie wspieramy różnorodność, społeczności mniejszościowe i bezpieczeństwo dla każdego."
+            },
         ];
 
         function createArticleElement(article, index) {
@@ -336,7 +358,7 @@
                               class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
                               href="${pledge.website}"
                               target="_blank">
-                            Website
+                            Strona
                           </a>
                     </div>
                     <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">${pledge.statement}</p>
