@@ -15,6 +15,11 @@
       "name": "Polski",
       "flag": "🇵🇱",
       "path": "/lang/pl/"
+    },
+    "ru": {
+      "name": "Русский",
+      "flag": "🇷🇺",
+      "path": "/lang/ru/"
     }
   },
   "site": {
