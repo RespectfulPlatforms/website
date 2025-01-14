@@ -6,7 +6,7 @@ class LanguagePicker {
 
   async init() {
     try {
-      const response = await fetch('/config.json');
+      const response = await fetch('/config.json?v=1');
       this.config = await response.json();
       
       this.currentLang = this.getCurrentLanguage();
