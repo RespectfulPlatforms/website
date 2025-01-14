@@ -20,6 +20,11 @@
       "name": "Русский",
       "flag": "🇷🇺",
       "path": "/lang/ru/"
+    },
+    "es": {
+      "name": "Español",
+      "flag": "🇪🇸",
+      "path": "/lang/es/"
     }
   },
   "site": {
