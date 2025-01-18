@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RespectfulPlatforms.org - Ψηφιακή Πλατφόρμα Καταστατικού Δικαιωμάτων</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/languagePicker.js?v=1"></script>
+    <style>
+        .article-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .article-content.expanded {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        .chevron.expanded {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 dark:bg-slate-950">
+    <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+        <div id="language-picker-container" class="w-full flex justify-end p-2"></div>
+        <div class="max-w-4xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-center mb-6">
+                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <path d="M14 2v6h6"/>
+                    <path d="M16 13H8"/>
+                    <path d="M16 17H8"/>
+                    <path d="M10 9H8"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-serif text-center text-gray-900 dark:text-slate-50 mb-4">
+                Ψηφιακή Πλατφόρμα Καταστατικού Δικαιωμάτων
+            </h1>
+            <p class="text-center text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
+                Μια διακήρυξη των βασικών δικαιωμάτων και αρχών για ηθικές ψηφιακές πλατφόρμες,
+                για την διασφάλισης της ιδιωτικότητας, αξιοπρέπειας και της αμεροληψίας στους διαδικτυακούς χώρους.
+            </p>
+        </div>
+    </header>
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="prose prose-blue max-w-none mb-12">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-4">Εισαγωγή</h2>
+            <p class="text-gray-600 leading-relaxed dark:text-slate-300">
+                Εμείς, οι αρχιτέκτονες και επόπτες των ψηφιακών πλατφορμών, αναγνωρίζουμε το βασικό
+                δικαίωμα όλων των χρηστών να συμμετέχουν σε διαδικτυακούς χώρους που σέβονται την ιδιωτικότητά
+                τους, την αξιοπρέπεια και την ευημερία τους. Αυτό το Κεφάλαιο εγκαθιδρύει τις αρχές και
+                τα πρότυπα που θα καθορίζουν την ανάπτυξη και λειτουργία των ηθικών ψηφιακών πλατφορμών.
+            </p>
+        </div>
+
+        <div id="articles" class="space-y-6">
+        </div>
+
+        <section id="pledged-orgs" class="my-16">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-6">Οργανισμοί Που Έχουν Δεσμευτεί</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="org-grid">
+                <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pixelfed</h3>
+                            <p class="text-sm text-gray-600">Δεσμεύτηκε στις 11 Ιαν 2025</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="https://pixelfed.org"
+                              target="_blank">
+                            Ιστοσελίδα
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">
+                        «Ως ιδρυτικό μέλος, το Pixelfed ενσωμάτωσε αυτές τις αρχές απευθείας στην αρχιτεκτονική της ομοσπονδιακής μας πλατφόρμας διαμοιρασμού φωτογραφιών, με σχεδιασμό με προτεραιότητα στο απόρρητο, χωρίς παρακολούθηση και φορητότητα δεδομένων στον πυρήνα του».
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pledge-form" class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
+            <h2 class="text-2xl font-bold mb-6 dark:text-slate-50">Δεσμευτείτε</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mb-6">
+                Με τη δέσμευσή σας, ο οργανισμός σας υπόσχεται να υλοποιήσει και να τηρήσει αυτές τις αρχές.
+                Για να κάνετε αίτηση, παρακαλώ στείλτε ένα email από τον ηθικό σας οργανισμό με την ιστοσελίδα σας και μια δήλωση σχετικά με τη δέσμευσή σας, στο <a href="mailto:pledge@pixelfed.org" target="_blank" class="font-bold">pledge@pixelfed.org</a>. Όλες οι δεσμεύσεις εξετάζονται πριν δημοσιευτούν.
+            </p>
+        </section>
+
+        <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
+            <p class="text-center text-gray-600 dark:text-slate-300 text-sm">
+                Αυτό το Κεφάλαιο είναι ένα <a href="https://github.com/RespectfulPlatforms/website" class="font-bold" target="_blank">ζωντανό έγγραφο</a>, που υπόκειται σε τακτική αναθεώρηση και τροποποίηση μέσω κοινοτικής
+                διαβούλευσης και των εξελισσόμενων ηθικών προτύπων στους ψηφιακούς χώρους. Δημιουργήθηκε από τους δημιουργούς
+                <a href="https://fediverse.info" class="font-bold">του fediverse</a>.
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        const articles = [
+          {
+              title: "Δικαίωμα στην Ιδιωτικότητα",
+              principles: [
+                  {
+                      title: "Ελαχιστοποίηση Δεδομένων",
+                      description: "Συλλέγονται μόνο τα απαραίτητα δεδομένα για τις βασικές λειτουργίες. Οι πλατφόρμες πρέπει να δικαιλογούν για ποιο λόγο πρέπει να συλλεχθεί μια πληροφορία."
+                  },
+                  {
+                      title: "Ρητό Περιεχόμενο",
+                      description: "Οι χρήστες πρέπει να δώσουν την συγκτάθεσή τους αφού έχουν ενημερωθεί πρώτα, πριν συλλεχθούν, αποθηκευτούν ή κοινοποιηθούν πληροφορίες σε τρίτους. Η συγκατάθεση πρέπει να είναι ελεύθερη, συγκεκριμένη και να μπορεί να ανακληθεί."
+                  },
+                  {
+                      title: "Σχεδιασμός με βάση την Ιδιωτικότητα",
+                      description: "Οι δυνατότητες και ενημερώσεις της πλατφόρμας αναπτύσσονται με την ιδιωτικότητα του χρήστη σε πρώτο πλάνο, αποτρέποντας την περιττή έκθεση δεδομένων."
+                  }
+              ]
+          },
+          {
+              title: "Απελευθέρωση από την Παρακολούθηση",
+              principles: [
+                  {
+                      title: "Χωρίς Μη Συναινετική Παρακολούθηση",
+                      description: "Οι χρήστες δεν παρακολουθούνται ή ανιχνεύονται κρυφά στο διαδίκτυο. Οποιαδήποτε μορφή ανίχνευσης πρέπει να γνωστοποιείται ρητά και να υπάρχει συναίνεση."
+                  },
+                  {
+                      title: "Διαφάνεια",
+                      description: "Εάν χρησιμοποιούνται αναλυτικά στοιχεία ή παρακολούθηση (για ασφάλεια, αποτροπή spam ή εντοπισμό σφαλμάτων), τεκμηριώνονται με διαφάνεια και περιορίζονται σε εύρος."
+                  },
+                  {
+                      title: "Ορατότητα Διαχειριζόμενη από τον Χρήστη",
+                      description: "Οι χρήστες μπορούν να τροποποιήσουν τις ρυθμίσεις ορατότητας για το προφίλ και περιεχόμενό τους, ελέγχοντας την δική τους ιδιωτικότητα."
+                  }
+              ]
+          },
+          {
+              title: "Δικλείδες Ασφαλείας Ενάντια στην Ρητορική Μίσους",
+              principles: [
+                  {
+                      title: "Πολιτική Μηδενικής Ανεκτικότητας",
+                      description: "Οι πολιτικές απαγορεύουν ρητά τη ρητορική μίσους, παρενόχληση, και στοχευμένη βία, με άμεσες και ξεκάθαρες ενέργειες συντονισμού."
+                  },
+                  {
+                      title: "Προσβάσιμο Σύστημα Αναφορών",
+                      description: "Ένα απλό και προσβάσιμο σύστημα επιτρέπει στους χρήστες να επισημαίνουν επιβλαβές περιεχόμενο για αξιολόγηση."
+                  },
+                  {
+                      title: "Ξεκάθαρα Πρότυπα Κοινότητας",
+                      description: "Ξεκάθαροι ορισμοί και παραδείγματα επιβλαβούς περιεχομένου αναρτώνται δημοσίως, ώστε οι χρήστες να μπορούν να καταλάβουν τι επιτρέπεται και τι όχι."
+                  }
+              ]
+          },
+          {
+              title: "Ισχυρή Προστασία για Ευάλωτες Κοινότητες",
+              principles: [
+                  {
+                      title: "Πολιτικές Συμπεριλιπτικού Συντονισμού",
+                      description: "Οι ομάδες συντονισμού εκπαιδεύονται να αναγνωρίζουν και να αντιμετωπίζουν περιεχόμενο που στοχεύει φυλές, εθνικότητα, φύλο, σεξουαλικό προσανατολισμό, αναπηρία, θρησκεία ή άλλες μειονότητες."
+                  },
+                  {
+                      title: "Διατομική Προσέγγιση",
+                      description: "Οι κανόνες και τα πρωτόκολλα επιβολής εξετάζουν αλληλεπικαλυπτόμενες ευπάθειες που ενισχύουν τις επιβλαβείς επιπτώσεις."
+                  },
+                  {
+                      title: "Διαδραστική Υποστήριξη",
+                      description: "Υπάρχουν αποκλειστικά κανάλια για να μπορούν οι χρήστες να απευθυνθούν γρήγορα αν νιώθουν ότι απειλούνται ή κινδυνεύουν στη πλατφόρμα."
+                  }
+              ]
+          },
+          {
+              title: "Φορητότητα Δεδομένων και Υπηρεσία Χρήστη",
+              principles: [
+                  {
+                      title: "Εύκολη Εξαγωγή",
+                      description: "Οι χρήστες έχουν το δικαίωμα να κατεβάσουν ή να εξαγάγουν τα δεδομένα τους οποιαδήποτε στιγμή, σε μία κοινή μορφή."
+                  },
+                  {
+                      title: "Δικαίωμα στη Διαγραφή",
+                      description: "Κατόπιν αιτήματος, τα δεδομένα ενός χρήστη θα διαγραφούν οριστικά από την πλατφόρμα, με την επιφύλαξη νομικών ή σχετικών με την ασφάλεια εξαιρέσεων."
+                  },
+                  {
+                      title: "Αποκεντροποιημένο & Διαλειτουργικό",
+                      description: "Οποτεδήποτε είναι δυνατό, η πλατφόρμα υποστηρίζει ανοιχτά πρωτόκολλα και πρότυπα για να επιτρέπει στους χρήστες να μετακινούνται και να συνδέονται μεταξύ διαφορετικών υπηρεσιών."
+                  }
+              ]
+          },
+          {
+              title: "Διαφάνεια και Υπευθυνότητα",
+              principles: [
+                  {
+                      title: "Ανοιχτή Διακυβέρνηση",
+                      description: "Οι πολιτικές της πλατφόρμας και οι διαδικασίες διακυβέρνησης είναι ανοιχτές, με τακτικές διαβουλεύσεις και επίβλεψη της κοινότητας."
+                  },
+                  {
+                      title: "Δημόσια Πλάνα Πορείας",
+                      description: "Οι αλλαγές στις πολιτικές ή στην τεχνολογία της πλατφόρμας δημοσιοποιούνται και οι ενδιαφερόμενοι μπορούν να σχολιάσουν ή να προτείνουν τροποποιήσεις."
+                  },
+                  {
+                      title: "Ανεξάρτητη Επίβλεψη",
+                      description: "Ένα αμερόληπτο όργανο ή συμβουλευτική ομάδα μπορεί να ελέγξει ή να επανεξετάσει τις πρακτικές εποπτείας και διαχείρισης δεδομένων για να διασφαλίσει ότι πληρούνται υψηλά πρότυπα δεοντολογίας."
+                  }
+              ]
+          },
+          {
+              title: "Ασφάλεια και Ευημερία",
+              principles: [
+                  {
+                      title: "Προειδοποιήσεις Περιεχομένου & Εργαλεία Συντονισμού",
+                      description: "Ισχυρά εργαλεία δίνουν τη δυνατότητα στους χρήστες να προστατεύονται από ενοχλητικό ή επιβλαβές περιεχόμενο μέσω προειδοποιήσεων περιεχομένου και λιστών φίλτρων."
+                  },
+                  {
+                      title: "Πόροι Ψυχικής Υγείας",
+                      description: "Η πλατφόρμα μοιράζεται πόρους και γραμμές βοήθειας για την υποστήριξη ψυχικής υγείας με σκοπό την προώθηση ενός υγιέστερου διαδικτυακού περιβάλλοντος."
+                  },
+                  {
+                      title: "Πρόληψη Ψηφιακής Βλάβης",
+                      description: "Προληπτικά μέτρα όπως τα όρια χρήσης και η σκεπτόμενη αλληλεπίδραση δρουν ως αντίμετρα για εθιστικά μοτίβα, spam και κατάχρηση."
+                  }
+              ]
+          },
+          {
+              title: "Διαφανής Στάση Κυβερνοασφάλειας",
+              principles: [
+                  {
+                      title: "Διαφάνης Στάση στην Ασφάλεια",
+                      description: "Τακτική δημοσίευση - τουλάχιστον ετήσια - των πρακτικών ασφαλείας, εφαρμοζόμενων διασφαλίσεων, που επιτρέπουν στους χρήστες να λαμβάνουν τεκμηριωμένες αποφάσεις σχετικά με την αξιοπιστία της πλατφόρμας."
+                  },
+                  {
+                      title: "Αποκάλυψη Περιστατικού",
+                      description: "Τα συμβάντα ασφαλείας που επηρεάζουν τα δεδομένα χρήστη ή την ακεραιότητα της πλατφόρμας πρέπει να γνωστοποιούνται αμέσως σε όλους τους επηρεαζόμενους χρήστες με σαφή εκτίμηση των επιπτώσεων."
+                  },
+                  {
+                      title: "Δημόσια Εκ των υστέρων Ανάλυση",
+                      description: "Δημοσιεύονται λεπτομερείς αναφορές ανάλυσης μετά το συμβάν για όλα τα συμβάντα ασφαλείας και τις απρογραμμάτιστες διακοπές λειτουργίας, εξηγώντας τις βαθύτερες αιτίες, τα βήματα αποκατάστασης και τα προληπτικά μέτρα που εφαρμόζονται για την πρόληψη μελλοντικών περιστατικών."
+                  }
+              ]
+          },
+          {
+              title: "Δικαιοσύνη στα Αλγοριθμικά Συστήματα",
+              principles: [
+                  {
+                      title: "Εξηγήσιμες Ροές",
+                      description: "Εάν μια ροή δεδομένων ή τα αποτελέσματα αναζήτησης επιμελούνται αλγοριθμικά, οι χρήστες αξίζουν κατανοητές εξηγήσεις για τους βασικούς παράγοντες κατάταξης."
+                  },
+                  {
+                      title: "Επιλογή για Εξαίρεση",
+                      description: "Οι χρήστες μπορούν να επιλέξουν μια χρονολογική ροή ή κάποια άλλη απλοποιημένη προβολή, εάν δεν επιθυμούν να αλληλεπιδρούν με αλγοριθμικές προτάσεις."
+                  },
+                  {
+                      title: "Μετριασμός Μεροληψίας",
+                      description: "Οι τακτικοί έλεγχοι διασφαλίζουν ότι οι αλγόριθμοι δεν καταστέλλουν ή ενισχύουν δυσανάλογα το περιεχόμενο που βασίζεται σε προστατευμένα χαρακτηριστικά."
+                  }
+              ]
+          },
+          {
+              title: "Συνπεριεκτική Κοινότητα και Διακυβέρνηση",
+              principles: [
+                  {
+                      title: "Δίκαιη Εκπροσώπηση",
+                      description: "Οι κοινοτικοί κανόνες και η ηγεσία πρέπει να αντικατοπτρίζουν διαφορετικές φωνές και εμπειρίες."
+                  },
+                  {
+                      title: "Προσβασιμότητα Γλωσσών",
+                      description: "Οι βασικές πολιτικές, οι οδηγοί βοήθειας και εποπτείας είναι διαθέσιμα σε πολλές γλώσσες, όσο το επιτρέπουν οι πόροι."
+                  },
+                  {
+                      title: "Συνεργατική Ανάπτυξη Πολιτικής",
+                      description: "Οι χρήστες ενθαρρύνονται να συμμετέχουν σε συζητήσεις πολιτικής και να βοηθήσουν στη διαμόρφωση της συνεχούς εξέλιξης της πλατφόρμας."
+                  }
+              ]
+          },
+          {
+              title: "Συνεχής Βελτίωση και Εξέλιξη",
+              principles: [
+                  {
+                      title: "Περιοδική Ανασκόπηση",
+                      description: "Η Διακήρυξη των Δικαιωμάτων, οι πολιτικές και οι στρατηγικές εφαρμογής επανεξετάζονται τακτικά και ενημερώνονται για να ανταποκρίνονται στα μεταβαλλόμενα κοινωνικά και τεχνολογικά τοπία."
+                  },
+                  {
+                      title: "Σχόλια Κοινότητας",
+                      description: "Υπάρχουν μηχανισμοί για τους χρήστες, ώστε να υποβάλλουν σχόλια, προτάσεις ή ανησυχίες, διασφαλίζοντας ότι η πλατφόρμα παραμένει ανταποκρινόμενη στην κοινότητά της."
+                  },
+                  {
+                      title: "Επιμερισμένη Ευθύνη",
+                      description: "Όλοι οι συμμετέχοντες —χρήστες, συντηρητές και εξωτερικοί συντελεστές— μοιράζονται την ευθύνη της τήρησης αυτών των αρχών."
+                  }
+              ]
+          }
+        ];
+
+        const pledges = [
+            {
+              name: "NextGraph.org",
+              date: "13 Ιαν 2025",
+              website: "https://NextGraph.org",
+              statement: "Το NextGraph.org δεσμεύεται βαθιά για τη φορητότητα δεδομένων, καθώς προχωρά ακόμη και πέρα ​​από την ομοσπονδία, για ένα πραγματικά αποκεντρωμένο δίκτυο. Εγγυάται τέλεια προστασία της ιδιωτικής ζωής, καθώς τα πάντα είναι κρυπτογραφημένα από άκρη σε άκρη. Οι επικείμενες εργασίες για την υλοποίηση μιας κοινωνικής πλατφόρμας που έχουμε σχεδιάσει, θα τηρούν τις αρχές που αναφέρονται στον Χάρτη Δικαιωμάτων της Ψηφιακής Πλατφόρμας, καθώς υποστηρίζουμε σθεναρά τη διαφορετικότητα, τις μειονοτικές κοινότητες και την ασφάλεια για όλους."
+            },
+        ];
+
+        function createArticleElement(article, index) {
+            const articleElement = document.createElement('div');
+            articleElement.className = 'mb-8 bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-600 overflow-hidden';
+            
+            const articleHTML = `
+                <button class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-600 hover:bg-gray-100 hover:dark:bg-slate-700 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-50 flex items-center justify-center font-serif">
+                            ${index + 1}
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-900 dark:text-slate-300">${article.title}</h3>
+                    </div>
+                    <svg class="chevron w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="article-content">
+                    <div class="px-6 py-4">
+                        ${article.principles.map(principle => `
+                            <div class="mb-10 last:mb-0">
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-50 mb-2">${principle.title}</h4>
+                                <p class="text-gray-600 leading-relaxed dark:text-slate-300">${principle.description}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            articleElement.innerHTML = articleHTML;
+            
+            const button = articleElement.querySelector('button');
+            const content = articleElement.querySelector('.article-content');
+            const chevron = articleElement.querySelector('.chevron');
+            
+            button.addEventListener('click', () => {
+                content.classList.toggle('expanded');
+                chevron.classList.toggle('expanded');
+            });
+            
+            return articleElement;
+        }
+
+        function displayPledges() {
+            const grid = document.getElementById('org-grid');
+            pledges.forEach(pledge => {
+                const pledgeEl = document.createElement('div');
+                pledgeEl.className = 'bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800';
+                pledgeEl.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">${pledge.name}</h3>
+                            <p class="text-sm text-gray-600">Δεσμεύτηκε στις ${pledge.date}</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="${pledge.website}"
+                              target="_blank">
+                            Ιστοσελίδα
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">${pledge.statement}</p>
+                `;
+                grid.appendChild(pledgeEl);
+            });
+        }
+
+        function initializeCharter() {
+            const articlesContainer = document.getElementById('articles');
+            articles.forEach((article, index) => {
+                articlesContainer.appendChild(createArticleElement(article, index));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          initializeCharter();
+          displayPledges();
+        });
+    </script>
+</body>
+</html>
