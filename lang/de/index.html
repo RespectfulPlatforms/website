@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RespectfulPlatforms.org - Digital Platform Charter of Rights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/languagePicker.js?v=1"></script>
+    <style>
+        .article-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .article-content.expanded {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        .chevron.expanded {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 dark:bg-slate-950">
+    <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+        <div id="language-picker-container" class="w-full flex justify-end p-2"></div>
+        <div class="max-w-4xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-center mb-6">
+                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <path d="M14 2v6h6"/>
+                    <path d="M16 13H8"/>
+                    <path d="M16 17H8"/>
+                    <path d="M10 9H8"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-serif text-center text-gray-900 dark:text-slate-50 mb-4">
+                Charta der Rechte für digitale Plattformen
+            </h1>
+            <p class="text-center text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
+                Eine Erklärung der Grundrechte und Grundsätze für ethische digitale Plattformen,
+                die Privatsphäre, Würde und Fairness auf Online-Plattformen gewährleisten.
+            </p>
+        </div>
+    </header>
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="prose prose-blue max-w-none mb-12">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-4"Präambel</h2>
+            <p class="text-gray-600 leading-relaxed dark:text-slate-300">
+               Wir, die Architekten und Verwalter digitaler Plattformen, erkennen die grundlegenden Rechte aller Nutzer an, an Online-Plattformen teilzunehmen, die ihre Privatsphäre, ihre Würde und ihr Wohlbefinden respektieren. Diese Charta legt die Grundsätze und Standards fest, die für die Entwicklung und den Betrieb ethischer digitaler Plattformen gelten sollen.
+            </p>
+        </div>
+
+        <div id="articles" class="space-y-6">
+        </div>
+
+        <section id="pledged-orgs" class="my-16">
+            <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-6">Organisationen, die teilnehmen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="org-grid">
+                <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pixelfed</h3>
+                            <p class="text-sm text-gray-600">Zugesagt am 11. Januar 2025</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="https://pixelfed.org"
+                              target="_blank">
+                            Website
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">
+                        "Als Gründungsmitglied hat Pixelfed diese Grundsätze direkt in die Architektur seiner Plattform für die gemeinsame Nutzung von Fotos integriert, wobei Datenschutz, keine Nachverfolgung und Datenübertragbarkeit im Mittelpunkt stehen."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pledge-form" class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
+            <h2 class="text-2xl font-bold mb-6 dark:text-slate-50">Teilnehmen</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mb-6">
+                Mit Ihrer Zusage verpflichtet sich ihre Organisation, diese Grundsätze umzusetzen und zu wahren.
+                Um sich zu bewerben, senden Sie bitte eine E-Mail von der Domain ihrer ethischen Organisation mit ihrer Website und einer Erklärung über das Versprechen an <a href="mailto:pledge@pixelfed.org" target="_blank" class="font-bold">pledge@pixelfed.org</a>. Alle einzelnen Zusagen werden überprüft, bevor sie öffentlich aufgeführt werden.             </p>
+        </section>
+
+        <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
+            <p class="text-center text-gray-600 dark:text-slate-300 text-sm">
+                Diese Charta ist ein <a href="https://github.com/RespectfulPlatforms/website" class="font-bold" target="_blank">lebendiges Dokument</a>, vorbehaltlich einer regelmäßigen Überprüfung und Änderung 
+                durch Konsultation der Gemeinschaft und sich entwickelnden ethischen Standards in digitalen Räumen und auf digitalen Plattformen. Erstellt von den Entwicklern des <a href="https://fediverse.info" class="font-bold">Fediverse</a>.
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        const articles = [
+          {
+              title: "Recht auf Privatsphäre",
+              principles: [
+                  {
+                      title: "Minimierung von Daten",
+                      description: "Es werden nur die für die Kernfunktionen erforderlichen Daten erhoben. Die Plattformen müssen die Notwendigkeit jedes erfassten Datenpunktes begründen."
+                  },
+                  {
+                      title: "Ausdrückliche Zustimmung",
+                      description: "Bevor personenbezogene Daten erhoben, gespeichert oder an Dritte weitergegeben werden, müssen die Nutzer ihre Zustimmung geben. Die Einwilligung muss freiwillig, ausdrücklich und widerruflich erteilt werden."
+                  },
+                  {
+                      title: "Datenschutz per Design",
+                      description: "Plattformfunktionen und -aktualisierungen werden standardmäßig unter Berücksichtigung des Datenschutzes entwickelt, um eine unnötige Offenlegung von Daten zu verhindern."
+                  }
+              ]
+          },
+          {
+              title: "Freiheit vor Überwachung",
+              principles: [
+                  {
+                      title: "Kein nicht-einvernehmliches Tracking",
+                      description: "Nutzer werden nicht heimlich überwacht oder über das Internet verfolgt. Jede Form des Trackings muss ausdrücklich offengelegt und genehmigt werden."
+                  },
+                  {
+                      title: "Klare Übersichtlichkeit",
+                      description: "Wenn Analysen oder Tracking (beispielsweise für Sicherheit, Spamschutz oder Fehlersuche) verwendet werden, ist dies transparent dokumentiert und das Tracking in seinem Umfang begrenzt."
+                  },
+                  {
+                      title: "Benutzerkontrollierte Sichtbarkeit",
+                      description: "Nutzer können die Sichtbarkeitseinstellungen für ihre Profile und Inhalte ganz einfach anpassen, um ihre Privatsphäre zu wahren."
+                  }
+              ]
+          },
+          {
+              title: "SSchutzmaßnahmen gegen Hassrede",
+              principles: [
+                  {
+                      title: "Null-Toleranz-Politik",
+                      description: "Die Richtlinien verbieten ausdrücklich Hassreden, Belästigung und gezielte Gewalt und sehen rasche und transparente Moderationsmaßnahmen vor."
+                  },
+                  {
+                      title: "Zugängliches Meldesystem",
+                      description: "Ein einfaches und zugängliches System ermöglicht es den Nutzern, schädliche Inhalte zur Überprüfung zu markieren und einzureichen."
+                  },
+                  {
+                      title: "Klare Gemeinschaftsstandards",
+                      description: "Klare Definitionen und Beispiele für schädliche Inhalte werden öffentlich bekannt gegeben, damit die Nutzer wissen, was erlaubt ist und was nicht.."
+                  }
+              ]
+          },
+          {
+              title: "Starke Schutzmaßnahmen für gefährdete Gemeinschaften",
+              principles: [
+                  {
+                      title: "Inklusive Moderationsrichtlinien",
+                      description: "Die Moderationsteams sind darin geschult, Inhalte zu erkennen und zu behandeln, die auf Ethnie, Geschlecht, sexuelle Orientierung, Behinderung, Religion oder andere marginalisierte Identitäten abzielen."
+                  },
+                  {
+                      title: "Intersektioneller Ansatz",
+                      description: "Vorschriften und Durchsetzungsprotokolle berücksichtigen überlappende Schwachstellen, die schädliche Auswirkungen verstärken."
+                  },
+                  {
+                      title: "Reaktionsschneller Support",
+                      description: "Es gibt spezielle Kanäle, an die sich die Nutzer schnell wenden können, wenn sie sich auf der Plattform bedroht oder unsicher fühlen."
+                  }
+              ]
+          },
+          {
+              title: "Datenübertragbarkeit und Nutzervertretung",
+              principles: [
+                  {
+                      title: "Einfacher Export",
+                      description: "Nutzer haben das Recht, ihre Daten jederzeit in einem gängigen Format herunterzuladen und zu exportieren."
+                  },
+                  {
+                      title: "Recht auf Löschung",
+                      description: "Auf Wunsch werden die Daten eines Nutzers, vorbehaltlich rechtlicher oder sicherheitsrelevanter Ausnahmen, dauerhaft von der Plattform gelöscht."
+                  },
+                  {
+                      title: "Dezentralisiert & interoperabel",
+                      description: "Wann immer möglich, unterstützt die Plattform offene Protokolle und Standards, um den Benutzern die Freiheit zu geben, zwischen verschiedenen Diensten zu migrieren und Verbindungen herzustellen."
+                  }
+              ]
+          },
+          {
+              title: "Transparenz und Verantwortlichkeit",
+              principles: [
+                  {
+                      title: "Offene Verwaltung",
+                      description: "Die Plattformpolitik und die Governance-Prozesse sind offen definiert, mit regelmäßigen Konsultationen der Gemeinschaft und innerhalb deren Kontrolle."
+                  },
+                  {
+                      title: "Öffentliche Roadmaps",
+                      description: "Änderungen an der Plattformpolitik oder -technologie werden veröffentlicht und die Beteiligten können Kommentare abgeben oder Änderungen vorschlagen."
+                  },
+                  {
+                      title: "Unabhängige Aufsicht",
+                      description: "Ein unparteiisches Gremium oder eine Beratungsgruppe kann die Moderations- und Datenverarbeitungspraktiken prüfen, um sicherzustellen, dass diese hohen ethischen Standards entsprechen."
+                  }
+              ]
+          },
+          {
+              title: "Sicherheit und Wohlbefinden",
+              principles: [
+                  {
+                      title: "Inhaltswarnungen und Moderationswerkzeuge",
+                      description: "Robuste Tools ermöglichen es den Nutzern, sich durch Inhaltswarnungen und Filterlisten vor störenden oder schädlichen Inhalten zu schützen."
+                  },
+                  {
+                      title: "Ressourcen für psychische Gesundheit",
+                      description: "Die Plattform stellt Ressourcen und Hotlines zur Unterstützung der psychischen Gesundheit zur Verfügung, um ein gesünderes Online-Umfeld zu schaffen."
+                  },
+                  {
+                      title: "Prävention von digitalem Schaden",
+                      description: "Proaktive Maßnahmen wie Ratenbegrenzungen und durchdachte Reibungsverluste wirken süchtig machenden Mustern, Spam und Missbrauch entgegen."
+                  }
+              ]
+          },
+          {
+              title: "Transparente Haltung zur Cybersicherheit",
+              principles: [
+                  {
+                      title: "Transparenz der Sicherheitslage",
+                      description: "Regelmäßige Veröffentlichungen - mindestens jährlich - von Sicherheitspraktiken und implementierten Schutzmaßnahmen sorgen dafür, dass Nutzer fundierte Entscheidungen über die Vertrauenswürdigkeit der Plattform treffen können."
+                  },
+                  {
+                      title: "Offenlegung von Vorfällen",
+                      description: "Sicherheitsvorfälle, die Nutzerdaten oder die Integrität der Plattform betreffen, müssen allen betroffenen Nutzern unverzüglich mitgeteilt werden, wobei die Auswirkungen klar zu bewerten sind."
+                  },
+                  {
+                      title: "Öffentliche Post-Mortems",
+                      description: "Für alle Sicherheitsvorfälle und ungeplanten Ausfallzeiten werden nach dem Vorfall detaillierte Analyseberichte veröffentlicht, in denen die Ursachen, Abhilfemaßnahmen und Präventivmaßnahmen zur Vermeidung künftiger Vorfälle erläutert werden."
+                  }
+              ]
+          },
+          {
+              title: "Fairness in algorithmischen Systemen",
+              principles: [
+                  {
+                      title: "Erklärbare Feeds",
+                      description: "Wenn ein Feed oder die Suchergebnisse algorithmisch kuratiert werden, verdienen die Nutzer verständliche Erklärungen der wichtigsten Rankingfaktoren."
+                  },
+                  {
+                      title: "Option zur Abmeldung",
+                      description: "Nutzer können einen chronologischen Feed oder eine andere vereinfachte Ansicht wählen, wenn sie sich nicht mit algorithmischen Empfehlungen befassen möchten."
+                  },
+                  {
+                      title: "Entschärfung von Vorurteilen",
+                      description: "Regelmäßige Audits stellen sicher, dass die Algorithmen keine unverhältnismäßige Unterdrückung oder Verstärkung von Inhalten aufgrund geschützter Merkmale bewirken."
+                  }
+              ]
+          },
+          {
+              title: "Integrative Gemeinschaft und Governance",
+              principles: [
+                  {
+                      title: "Gleichberechtigte Vertretung",
+                      description: "Die Regeln und das Leadership der Gemeinschaft sollten verschiedene Stimmen und Erfahrungen widerspiegeln."
+                  },
+                  {
+                      title: "Zugänglichkeit der Sprache",
+                      description: "Die wichtigsten Richtlinien, Hilfestellungen und Moderationsleitfäden sind in mehreren Sprachen verfügbar, soweit es die Ressourcen erlauben."
+                  },
+                  {
+                      title: "Gemeinsame Entwicklung der Politik",
+                      description: "Nutzer sind aufgerufen, sich an den politischen Diskussionen zu beteiligen und die weitere Entwicklung der Plattform mitzugestalten."
+                  }
+              ]
+          },
+          {
+              title: "Kontinuierliche Verbesserung und Weiterentwicklung",
+              principles: [
+                  {
+                      title: "Regelmäßige Überprüfung",
+                      description: "Die Charta der Rechte, die Politik und die Umsetzungsstrategien werden regelmäßig überprüft und aktualisiert, um den sich verändernden sozialen und technologischen Gegebenheiten Rechnung zu tragen."
+                  },
+                  {
+                      title: "Gemeinschaftliches Feedback",
+                      description: "Es gibt Mechanismen, mit denen die Nutzer Rückmeldungen, Vorschläge oder Bedenken einreichen können, so dass die Plattform stets auf die Bedürfnisse ihrer Community eingeht."
+                  },
+                  {
+                      title: "Geteilte Verantwortung",
+                      description: "Alle Beteiligten - Nutzer, Betreuer und externe Mitwirkende - sind gemeinsam für die Einhaltung dieser Grundsätze verantwortlich."
+                  }
+              ]
+          }
+        ];
+
+        const pledges = [
+            {
+              name: "NextGraph.org",
+              date: "13. Januar 2025",
+              website: "https://NextGraph.org",
+              statement: "NextGraph.org hat sich der Datenportabilität verschrieben und geht sogar noch weiter als die Föderation des Fediverse, um ein wirklich dezentrales Netzwerk zu schaffen. Es garantiert perfekte Privatsphäre, da alles von Anfang bis Ende verschlüsselt ist. Die bevorstehende Arbeit an der Implementierung einer sozialen Plattform, die wir geplant haben, wird die in der Charta der Rechte der digitalen Plattformen aufgeführten Prinzipien aufrechterhalten, da wir Vielfalt, Minderheitengemeinschaften und Sicherheit für alle stark unterstützen."
+            },
+        ];
+
+        function createArticleElement(article, index) {
+            const articleElement = document.createElement('div');
+            articleElement.className = 'mb-8 bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-600 overflow-hidden';
+            
+            const articleHTML = `
+                <button class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-600 hover:bg-gray-100 hover:dark:bg-slate-700 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-50 flex items-center justify-center font-serif">
+                            ${index + 1}
+                        </div>
+                        <h3 class="text-xl font-serif text-gray-900 dark:text-slate-300">${article.title}</h3>
+                    </div>
+                    <svg class="chevron w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="article-content">
+                    <div class="px-6 py-4">
+                        ${article.principles.map(principle => `
+                            <div class="mb-10 last:mb-0">
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-50 mb-2">${principle.title}</h4>
+                                <p class="text-gray-600 leading-relaxed dark:text-slate-300">${principle.description}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            articleElement.innerHTML = articleHTML;
+            
+            const button = articleElement.querySelector('button');
+            const content = articleElement.querySelector('.article-content');
+            const chevron = articleElement.querySelector('.chevron');
+            
+            button.addEventListener('click', () => {
+                content.classList.toggle('expanded');
+                chevron.classList.toggle('expanded');
+            });
+            
+            return articleElement;
+        }
+
+        function displayPledges() {
+            const grid = document.getElementById('org-grid');
+            pledges.forEach(pledge => {
+                const pledgeEl = document.createElement('div');
+                pledgeEl.className = 'bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800';
+                pledgeEl.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-slate-200">${pledge.name}</h3>
+                            <p class="text-sm text-gray-600">Zugesagt am ${pledge.date}</p>
+                        </div>
+                           <a 
+                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                              href="${pledge.website}"
+                              target="_blank">
+                            Website
+                          </a>
+                    </div>
+                    <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">${pledge.statement}</p>
+                `;
+                grid.appendChild(pledgeEl);
+            });
+        }
+
+        function initializeCharter() {
+            const articlesContainer = document.getElementById('articles');
+            articles.forEach((article, index) => {
+                articlesContainer.appendChild(createArticleElement(article, index));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          initializeCharter();
+          displayPledges();
+        });
+    </script>
+</body>
+</html>
