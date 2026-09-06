@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RespectfulPlatforms.org - Digital Platform Charter of Rights</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet">
     <script src="/js/languagePicker.js?v=1"></script>
     <style>
         .article-content {
@@ -12,29 +13,34 @@
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
+
         .article-content.expanded {
             max-height: 1000px;
             transition: max-height 0.5s ease-in;
         }
+
         .chevron {
             transition: transform 0.3s ease;
         }
+
         .chevron.expanded {
             transform: rotate(180deg);
         }
     </style>
 </head>
+
 <body class="min-h-screen bg-gray-100 dark:bg-slate-950">
     <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
         <div id="language-picker-container" class="w-full flex justify-end p-2"></div>
         <div class="max-w-4xl mx-auto px-6 py-8">
             <div class="flex items-center justify-center mb-6">
-                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <path d="M14 2v6h6"/>
-                    <path d="M16 13H8"/>
-                    <path d="M16 17H8"/>
-                    <path d="M10 9H8"/>
+                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6" />
+                    <path d="M16 13H8" />
+                    <path d="M16 17H8" />
+                    <path d="M10 9H8" />
                 </svg>
             </div>
             <h1 class="text-4xl font-serif text-center text-gray-900 dark:text-slate-50 mb-4">
@@ -50,9 +56,9 @@
         <div class="prose prose-blue max-w-none mb-12">
             <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-4">Preamble</h2>
             <p class="text-gray-600 leading-relaxed dark:text-slate-300">
-                We, the architects and stewards of digital platforms, recognize the fundamental 
-                rights of all users to participate in online spaces that respect their privacy, 
-                dignity, and well-being. This Charter establishes the principles and standards 
+                We, the architects and stewards of digital platforms, recognize the fundamental
+                rights of all users to participate in online spaces that respect their privacy,
+                dignity, and well-being. This Charter establishes the principles and standards
                 that shall govern the development and operation of ethical digital platforms.
             </p>
         </div>
@@ -63,252 +69,258 @@
         <section id="pledged-orgs" class="my-16">
             <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-6">Organizations That Have Pledged</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="org-grid">
-                <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
                     <div class="flex items-start justify-between">
                         <div>
                             <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pixelfed</h3>
                             <p class="text-sm text-gray-600">Pledged on Jan 11, 2025</p>
                         </div>
-                           <a 
-                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
-                              href="https://pixelfed.org"
-                              target="_blank">
+                        <a class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                            href="https://pixelfed.org" target="_blank">
                             Website
-                          </a>
+                        </a>
                     </div>
                     <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">
-                        "As a founding signatory, Pixelfed built these principles directly into our federated photo-sharing platform's architecture, with privacy-first design, no tracking, and data portability at its core."
+                        "As a founding signatory, Pixelfed built these principles directly into our federated
+                        photo-sharing platform's architecture, with privacy-first design, no tracking, and data
+                        portability at its core."
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="pledge-form" class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
+        <section id="pledge-form"
+            class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
             <h2 class="text-2xl font-bold mb-6 dark:text-slate-50">Take the Pledge</h2>
             <p class="text-sm text-gray-600 dark:text-slate-300 mb-6">
                 By pledging, your organization commits to implementing and upholding these principles.
-                To apply, please send an email from your ethical organization with your website, and a statement about the pledge to <a href="mailto:pledge@pixelfed.org" target="_blank" class="font-bold">pledge@pixelfed.org</a>. All pledges are reviewed before being publicly listed. 
+                To apply, please send an email from your ethical organization with your website, and a statement about
+                the pledge to <a href="mailto:pledge@pixelfed.org" target="_blank"
+                    class="font-bold">pledge@pixelfed.org</a>. All pledges are reviewed before being publicly listed.
             </p>
         </section>
 
         <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
             <p class="text-center text-gray-600 dark:text-slate-300 text-sm">
-                This Charter is a <a href="https://github.com/RespectfulPlatforms/website" class="font-bold" target="_blank">living document</a>, subject to regular review and amendment 
-                through community consultation and evolving ethical standards in digital spaces. Created by developers of <a href="https://fediverse.info" class="font-bold">the fediverse</a>.
+                This Charter is a <a href="https://github.com/RespectfulPlatforms/website" class="font-bold"
+                    target="_blank">living document</a>, subject to regular review and amendment
+                through community consultation and evolving ethical standards in digital spaces. Created by developers
+                of <a href="https://fediverse.info" class="font-bold">the fediverse</a>.
             </p>
         </footer>
     </main>
 
     <script>
         const articles = [
-          {
-              title: "Right to Privacy",
-              principles: [
-                  {
-                      title: "Data Minimization",
-                      description: "Only the data necessary for core functionalities is collected. Platforms must justify the necessity of each data point gathered."
-                  },
-                  {
-                      title: "Explicit Consent",
-                      description: "Users must give informed consent before any personal data is gathered, stored, or shared with third parties. Consent must be freely given, specific, and revocable."
-                  },
-                  {
-                      title: "Privacy by Design",
-                      description: "Platform features and updates are developed with user privacy as a default, preventing unnecessary data exposure."
-                  }
-              ]
-          },
-          {
-              title: "Freedom from Surveillance",
-              principles: [
-                  {
-                      title: "No Non-Consensual Tracking",
-                      description: "Users are not secretly monitored or tracked across the internet. Any form of tracking must be explicitly disclosed and consented to."
-                  },
-                  {
-                      title: "Clear Oversight",
-                      description: "If analytics or tracking is used (for security, spam prevention, or debugging), it is transparently documented and limited in scope."
-                  },
-                  {
-                      title: "User-Controlled Visibility",
-                      description: "Users can easily adjust visibility settings for their profiles and content to manage their own privacy."
-                  }
-              ]
-          },
-          {
-              title: "Safeguards Against Hate Speech",
-              principles: [
-                  {
-                      title: "Zero Tolerance Policy",
-                      description: "Policies explicitly prohibit hate speech, harassment, and targeted violence, with swift and transparent moderation actions."
-                  },
-                  {
-                      title: "Accessible Reporting System",
-                      description: "A simple and accessible system allows users to flag harmful content for review."
-                  },
-                  {
-                      title: "Clear Community Standards",
-                      description: "Clear definitions and examples of harmful content are publicly posted, so users understand what is and isn't permissible."
-                  }
-              ]
-          },
-          {
-              title: "Strong Protections for Vulnerable Communities",
-              principles: [
-                  {
-                      title: "Inclusive Moderation Policies",
-                      description: "Moderation teams are trained to recognize and address content targeting race, ethnicity, gender, sexual orientation, disability, religion, or other marginalized identities."
-                  },
-                  {
-                      title: "Intersectional Approach",
-                      description: "Rules and enforcement protocols consider overlapping vulnerabilities that amplify harmful impacts."
-                  },
-                  {
-                      title: "Responsive Support",
-                      description: "Dedicated channels exist for users to quickly reach out if they feel threatened or unsafe on the platform."
-                  }
-              ]
-          },
-          {
-              title: "Data Portability and User Agency",
-              principles: [
-                  {
-                      title: "Easy Export",
-                      description: "Users have the right to download or export their data at any time, in a common format."
-                  },
-                  {
-                      title: "Right to Deletion",
-                      description: "Upon request, a user's data will be permanently deleted from the platform, subject to legal or safety exceptions."
-                  },
-                  {
-                      title: "Decentralized & Interoperable",
-                      description: "Whenever possible, the platform supports open protocols and standards to allow users freedom to migrate and connect across different services."
-                  }
-              ]
-          },
-          {
-              title: "Transparency and Accountability",
-              principles: [
-                  {
-                      title: "Open Governance",
-                      description: "Platform policies and governance processes are open, with regular community consultations and oversight."
-                  },
-                  {
-                      title: "Public Roadmaps",
-                      description: "Changes to platform policies or technology are made public, and stakeholders can comment or propose modifications."
-                  },
-                  {
-                      title: "Independent Oversight",
-                      description: "An impartial body or advisory group can audit or review moderation and data-handling practices to ensure they meet high ethical standards."
-                  }
-              ]
-          },
-          {
-              title: "Safety and Well-Being",
-              principles: [
-                  {
-                      title: "Content Warnings & Moderation Tools",
-                      description: "Robust tools empower users to shield themselves from disturbing or harmful content through content warnings and filter lists."
-                  },
-                  {
-                      title: "Mental Health Resources",
-                      description: "The platform shares resources and hotlines for mental health support to foster a healthier online environment."
-                  },
-                  {
-                      title: "Preventing Digital Harm",
-                      description: "Proactive measures like rate limits and thoughtful friction counteract addictive patterns, spam, and abuse."
-                  }
-              ]
-          },
-          {
-              title: "Transparent Cybersecurity Posture",
-              principles: [
-                  {
-                      title: "Security Posture Transparency",
-                      description: "Regular publication - at least annual - of security practices, implemented safeguards, enabling users to make informed decisions about platform trustworthiness."
-                  },
-                  {
-                      title: "Incident Disclosure",
-                      description: "Security incidents affecting user data or platform integrity must be promptly disclosed to all impacted users with clear impact assessment."
-                  },
-                  {
-                      title: "Public Post-Mortems",
-                      description: "Detailed post-incident analysis reports are published for all security incidents and unplanned downtime, explaining root causes, remediation steps, and preventive measures implemented to prevent future occurrences."
-                  }
-              ]
-          },
-          {
-              title: "Fairness in Algorithmic Systems",
-              principles: [
-                  {
-                      title: "Explainable Feeds",
-                      description: "If a feed or search results are algorithmically curated, users deserve understandable explanations of key ranking factors."
-                  },
-                  {
-                      title: "Option to Opt Out",
-                      description: "Users can select a chronological feed or other simplified view if they do not wish to engage with algorithmic recommendations."
-                  },
-                  {
-                      title: "Bias Mitigation",
-                      description: "Regular audits ensure algorithms do not disproportionately suppress or amplify content based on protected characteristics."
-                  }
-              ]
-          },
-          {
-              title: "Inclusive Community and Governance",
-              principles: [
-                  {
-                      title: "Equitable Representation",
-                      description: "Community rules and leadership should reflect diverse voices and experiences."
-                  },
-                  {
-                      title: "Language Accessibility",
-                      description: "Key policies, help guides, and moderation guidelines are available in multiple languages, as resources allow."
-                  },
-                  {
-                      title: "Collaborative Policy Development",
-                      description: "Users are encouraged to participate in policy discussions and help shape the platform's continued evolution."
-                  }
-              ]
-          },
-          {
-              title: "Continuous Improvement and Evolution",
-              principles: [
-                  {
-                      title: "Periodic Review",
-                      description: "The Bill of Rights, policies, and implementation strategies are reviewed regularly and updated to meet changing social and technological landscapes."
-                  },
-                  {
-                      title: "Community Feedback",
-                      description: "Mechanisms exist for users to submit feedback, suggestions, or concerns, ensuring the platform remains responsive to its community."
-                  },
-                  {
-                      title: "Shared Responsibility",
-                      description: "All participants—users, maintainers, and external contributors—share the responsibility of upholding these principles."
-                  }
-              ]
-          }
+            {
+                title: "Right to Privacy",
+                principles: [
+                    {
+                        title: "Data Minimization",
+                        description: "Only the data necessary for core functionalities is collected. Platforms must justify the necessity of each data point gathered."
+                    },
+                    {
+                        title: "Explicit Consent",
+                        description: "Users must give informed consent before any personal data is gathered, stored, or shared with third parties. Consent must be freely given, specific, and revocable."
+                    },
+                    {
+                        title: "Privacy by Design",
+                        description: "Platform features and updates are developed with user privacy as a default, preventing unnecessary data exposure."
+                    }
+                ]
+            },
+            {
+                title: "Freedom from Surveillance",
+                principles: [
+                    {
+                        title: "No Non-Consensual Tracking",
+                        description: "Users are not secretly monitored or tracked across the internet. Any form of tracking must be explicitly disclosed and consented to."
+                    },
+                    {
+                        title: "Clear Oversight",
+                        description: "If analytics or tracking is used (for security, spam prevention, or debugging), it is transparently documented and limited in scope."
+                    },
+                    {
+                        title: "User-Controlled Visibility",
+                        description: "Users can easily adjust visibility settings for their profiles and content to manage their own privacy."
+                    }
+                ]
+            },
+            {
+                title: "Safeguards Against Hate Speech",
+                principles: [
+                    {
+                        title: "Zero Tolerance Policy",
+                        description: "Policies explicitly prohibit hate speech, harassment, and targeted violence, with swift and transparent moderation actions."
+                    },
+                    {
+                        title: "Accessible Reporting System",
+                        description: "A simple and accessible system allows users to flag harmful content for review."
+                    },
+                    {
+                        title: "Clear Community Standards",
+                        description: "Clear definitions and examples of harmful content are publicly posted, so users understand what is and isn't permissible."
+                    }
+                ]
+            },
+            {
+                title: "Strong Protections for Vulnerable Communities",
+                principles: [
+                    {
+                        title: "Inclusive Moderation Policies",
+                        description: "Moderation teams are trained to recognize and address content targeting race, ethnicity, gender, sexual orientation, disability, religion, or other marginalized identities."
+                    },
+                    {
+                        title: "Intersectional Approach",
+                        description: "Rules and enforcement protocols consider overlapping vulnerabilities that amplify harmful impacts."
+                    },
+                    {
+                        title: "Responsive Support",
+                        description: "Dedicated channels exist for users to quickly reach out if they feel threatened or unsafe on the platform."
+                    }
+                ]
+            },
+            {
+                title: "Data Portability and User Agency",
+                principles: [
+                    {
+                        title: "Easy Export",
+                        description: "Users have the right to download or export their data at any time, in a common format."
+                    },
+                    {
+                        title: "Right to Deletion",
+                        description: "Upon request, a user's data will be permanently deleted from the platform, subject to legal or safety exceptions."
+                    },
+                    {
+                        title: "Decentralized & Interoperable",
+                        description: "Whenever possible, the platform supports open protocols and standards to allow users freedom to migrate and connect across different services."
+                    }
+                ]
+            },
+            {
+                title: "Transparency and Accountability",
+                principles: [
+                    {
+                        title: "Open Governance",
+                        description: "Platform policies and governance processes are open, with regular community consultations and oversight."
+                    },
+                    {
+                        title: "Public Roadmaps",
+                        description: "Changes to platform policies or technology are made public, and stakeholders can comment or propose modifications."
+                    },
+                    {
+                        title: "Independent Oversight",
+                        description: "An impartial body or advisory group can audit or review moderation and data-handling practices to ensure they meet high ethical standards."
+                    }
+                ]
+            },
+            {
+                title: "Safety and Well-Being",
+                principles: [
+                    {
+                        title: "Content Warnings & Moderation Tools",
+                        description: "Robust tools empower users to shield themselves from disturbing or harmful content through content warnings and filter lists."
+                    },
+                    {
+                        title: "Mental Health Resources",
+                        description: "The platform shares resources and hotlines for mental health support to foster a healthier online environment."
+                    },
+                    {
+                        title: "Preventing Digital Harm",
+                        description: "Proactive measures like rate limits and thoughtful friction counteract addictive patterns, spam, and abuse."
+                    }
+                ]
+            },
+            {
+                title: "Transparent Cybersecurity Posture",
+                principles: [
+                    {
+                        title: "Security Posture Transparency",
+                        description: "Regular publication - at least annual - of security practices, implemented safeguards, enabling users to make informed decisions about platform trustworthiness."
+                    },
+                    {
+                        title: "Incident Disclosure",
+                        description: "Security incidents affecting user data or platform integrity must be promptly disclosed to all impacted users with clear impact assessment."
+                    },
+                    {
+                        title: "Public Post-Mortems",
+                        description: "Detailed post-incident analysis reports are published for all security incidents and unplanned downtime, explaining root causes, remediation steps, and preventive measures implemented to prevent future occurrences."
+                    }
+                ]
+            },
+            {
+                title: "Fairness in Algorithmic Systems",
+                principles: [
+                    {
+                        title: "Explainable Feeds",
+                        description: "If a feed or search results are algorithmically curated, users deserve understandable explanations of key ranking factors."
+                    },
+                    {
+                        title: "Option to Opt Out",
+                        description: "Users can select a chronological feed or other simplified view if they do not wish to engage with algorithmic recommendations."
+                    },
+                    {
+                        title: "Bias Mitigation",
+                        description: "Regular audits ensure algorithms do not disproportionately suppress or amplify content based on protected characteristics."
+                    }
+                ]
+            },
+            {
+                title: "Inclusive Community and Governance",
+                principles: [
+                    {
+                        title: "Equitable Representation",
+                        description: "Community rules and leadership should reflect diverse voices and experiences."
+                    },
+                    {
+                        title: "Language Accessibility",
+                        description: "Key policies, help guides, and moderation guidelines are available in multiple languages, as resources allow."
+                    },
+                    {
+                        title: "Collaborative Policy Development",
+                        description: "Users are encouraged to participate in policy discussions and help shape the platform's continued evolution."
+                    }
+                ]
+            },
+            {
+                title: "Continuous Improvement and Evolution",
+                principles: [
+                    {
+                        title: "Periodic Review",
+                        description: "The Bill of Rights, policies, and implementation strategies are reviewed regularly and updated to meet changing social and technological landscapes."
+                    },
+                    {
+                        title: "Community Feedback",
+                        description: "Mechanisms exist for users to submit feedback, suggestions, or concerns, ensuring the platform remains responsive to its community."
+                    },
+                    {
+                        title: "Shared Responsibility",
+                        description: "All participants—users, maintainers, and external contributors—share the responsibility of upholding these principles."
+                    }
+                ]
+            }
         ];
 
         const pledges = [
             {
-              name: "NextGraph.org",
-              date: "Jan 13, 2025",
-              website: "https://NextGraph.org",
-              statement: "NextGraph.org is committed to data portability at its core, as it even goes further and beyond federation, for a truly decentralized network. It does guarantee perfect privacy as everything is encrypted end to end. The upcoming work on implementing a social platform we have planned, will uphold the principles listed in the Digital Platform Charter of Rights, as we strongly support diversity, minority communities and safety for everyone."
+                name: "NextGraph.org",
+                date: "Jan 13, 2025",
+                website: "https://NextGraph.org",
+                statement: "NextGraph.org is committed to data portability at its core, as it even goes further and beyond federation, for a truly decentralized network. It does guarantee perfect privacy as everything is encrypted end to end. The upcoming work on implementing a social platform we have planned, will uphold the principles listed in the Digital Platform Charter of Rights, as we strongly support diversity, minority communities and safety for everyone."
             },
             {
-              name: "Emissary",
-              date: "Jan 18, 2025",
-              website: "https://emissary.dev",
-              statement: "Emissary is a toolkit for building social applications on the open web. My goal from its inception has been to create a fundamentally respectful, responsible technology stack that anyone can use to launch their own platforms.  I'm excited to see this Respectful Platforms initiative codifying these basic principles of human-first, accessible, and responsible design, and will strive to implement these values in Emissary, and every future app that uses Emissary at its core."
+                name: "Emissary",
+                date: "Jan 18, 2025",
+                website: "https://emissary.dev",
+                statement: "Emissary is a toolkit for building social applications on the open web. My goal from its inception has been to create a fundamentally respectful, responsible technology stack that anyone can use to launch their own platforms.  I'm excited to see this Respectful Platforms initiative codifying these basic principles of human-first, accessible, and responsible design, and will strive to implement these values in Emissary, and every future app that uses Emissary at its core."
             },
         ];
 
         function createArticleElement(article, index) {
             const articleElement = document.createElement('div');
             articleElement.className = 'mb-8 bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-600 overflow-hidden';
-            
+
             const articleHTML = `
                 <button class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-600 hover:bg-gray-100 hover:dark:bg-slate-700 transition-colors">
                     <div class="flex items-center space-x-4">
@@ -332,18 +344,18 @@
                     </div>
                 </div>
             `;
-            
+
             articleElement.innerHTML = articleHTML;
-            
+
             const button = articleElement.querySelector('button');
             const content = articleElement.querySelector('.article-content');
             const chevron = articleElement.querySelector('.chevron');
-            
+
             button.addEventListener('click', () => {
                 content.classList.toggle('expanded');
                 chevron.classList.toggle('expanded');
             });
-            
+
             return articleElement;
         }
 
@@ -378,10 +390,11 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-          initializeCharter();
-          displayPledges();
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeCharter();
+            displayPledges();
         });
     </script>
 </body>
+
 </html>

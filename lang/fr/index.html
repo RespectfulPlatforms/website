@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RespectfulPlatforms.org - Digital Platform Charter of Rights</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet">
     <script src="/js/languagePicker.js"></script>
     <style>
         .article-content {
@@ -12,29 +13,34 @@
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
+
         .article-content.expanded {
             max-height: 1000px;
             transition: max-height 0.5s ease-in;
         }
+
         .chevron {
             transition: transform 0.3s ease;
         }
+
         .chevron.expanded {
             transform: rotate(180deg);
         }
     </style>
 </head>
+
 <body class="min-h-screen bg-gray-100 dark:bg-slate-950">
     <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
         <div id="language-picker-container" class="w-full flex justify-end p-2"></div>
         <div class="max-w-4xl mx-auto px-6 py-8">
             <div class="flex items-center justify-center mb-6">
-                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <path d="M14 2v6h6"/>
-                    <path d="M16 13H8"/>
-                    <path d="M16 17H8"/>
-                    <path d="M10 9H8"/>
+                <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6" />
+                    <path d="M16 13H8" />
+                    <path d="M16 17H8" />
+                    <path d="M10 9H8" />
                 </svg>
             </div>
             <h1 class="text-4xl font-serif text-center text-gray-900 dark:text-slate-50 mb-4">
@@ -51,9 +57,9 @@
         <div class="prose prose-blue max-w-none mb-12">
             <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-4">Préambule</h2>
             <p class="text-gray-600 leading-relaxed dark:text-slate-300">
-                Nous, architectes et gardiens des plateformes numériques, reconnaissons les droits 
-                fondamentaux de tous les utilisateurs à participer à des espaces en ligne qui respectent 
-                leur vie privée, leur dignité et leur bien-être. Cette Charte établit les principes et 
+                Nous, architectes et gardiens des plateformes numériques, reconnaissons les droits
+                fondamentaux de tous les utilisateurs à participer à des espaces en ligne qui respectent
+                leur vie privée, leur dignité et leur bien-être. Cette Charte établit les principes et
                 les normes qui régiront le développement et le fonctionnement des plateformes numériques éthiques.
             </p>
         </div>
@@ -64,235 +70,242 @@
         <section id="pledged-orgs" class="my-16">
             <h2 class="font-serif text-2xl text-gray-900 dark:text-slate-50 mb-6">Organizations That Have Pledged</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="org-grid">
-                <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-slate-800">
                     <div class="flex items-start justify-between">
                         <div>
                             <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pixelfed</h3>
                             <p class="text-sm text-gray-600">Pledged on Jan 11, 2025</p>
                         </div>
-                           <a 
-                              class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
-                              href="https://pixelfed.org"
-                              target="_blank">
+                        <a class="inline-flex items-center gap-x-1.5 rounded-full px-2 py-1 text-xs font-medium text-gray-900 dark:text-slate-200 dark:hover:text-slate-400 dark:hover:ring-slate-800 ring-1 ring-inset ring-gray-200 dark:ring-slate-600"
+                            href="https://pixelfed.org" target="_blank">
                             Website
-                          </a>
+                        </a>
                     </div>
                     <p class="text-gray-700 dark:text-slate-500 text-sm mt-2">
-                        "As a founding signatory, Pixelfed built these principles directly into our federated photo-sharing platform's architecture, with privacy-first design, no tracking, and data portability at its core."
+                        "As a founding signatory, Pixelfed built these principles directly into our federated
+                        photo-sharing platform's architecture, with privacy-first design, no tracking, and data
+                        portability at its core."
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="pledge-form" class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
+        <section id="pledge-form"
+            class="bg-white dark:bg-slate-900 rounded-lg shadow-md p-8 border-l-4 border-slate-600">
             <h2 class="text-2xl font-bold mb-6 dark:text-slate-50">Prenez l'Engagement</h2>
             <p class="text-sm text-gray-600 dark:text-slate-300 mb-6">
                 En vous engageant, votre organisation s'engage à mettre en œuvre et à respecter ces principes.
-                Pour postuler, veuillez envoyer un e-mail depuis votre organisation éthique avec votre site web et une déclaration concernant l'engagement à <a href="mailto:pledge@pixelfed.org" target="_blank" class="font-bold">pledge@pixelfed.org</a>. Tous les engagements sont examinés avant d'être publiés publiquement.
+                Pour postuler, veuillez envoyer un e-mail depuis votre organisation éthique avec votre site web et une
+                déclaration concernant l'engagement à <a href="mailto:pledge@pixelfed.org" target="_blank"
+                    class="font-bold">pledge@pixelfed.org</a>. Tous les engagements sont examinés avant d'être publiés
+                publiquement.
             </p>
         </section>
 
         <footer class="mt-12 pt-8 border-t border-gray-200 dark:border-slate-800">
             <p class="text-center text-gray-600 dark:text-slate-300 text-sm">
-                Cette Charte est un <a href="https://github.com/RespectfulPlatforms/website" class="font-bold" target="_blank">document évolutif</a>, sujet à des révisions et modifications régulières 
-                à travers la consultation communautaire et l'évolution des normes éthiques dans les espaces numériques. Créé par les développeurs du <a href="https://fediverse.info" class="font-bold">fediverse</a>.
+                Cette Charte est un <a href="https://github.com/RespectfulPlatforms/website" class="font-bold"
+                    target="_blank">document évolutif</a>, sujet à des révisions et modifications régulières
+                à travers la consultation communautaire et l'évolution des normes éthiques dans les espaces numériques.
+                Créé par les développeurs du <a href="https://fediverse.info" class="font-bold">fediverse</a>.
             </p>
         </footer>
     </main>
 
     <script>
         const articles = [
-          {
-              title: "Droit à la Vie Privée",
-              principles: [
-                  {
-                      title: "Minimisation des Données",
-                      description: "Seules les données nécessaires aux fonctionnalités essentielles sont collectées. Les plateformes doivent justifier la nécessité de chaque donnée recueillie."
-                  },
-                  {
-                      title: "Consentement Explicite",
-                      description: "Les utilisateurs doivent donner leur consentement éclairé avant que toute donnée personnelle ne soit collectée, stockée ou partagée avec des tiers. Le consentement doit être donné librement, être spécifique et révocable."
-                  },
-                  {
-                      title: "Confidentialité dès la Conception",
-                      description: "Les fonctionnalités et les mises à jour de la plateforme sont développées avec la confidentialité des utilisateurs comme paramètre par défaut, empêchant toute exposition inutile des données."
-                  }
-              ]
-          },
-          {
-              title: "Protection contre la Surveillance",
-              principles: [
-                  {
-                      title: "Pas de Suivi Non Consensuel",
-                      description: "Les utilisateurs ne sont pas secrètement surveillés ou suivis sur Internet. Toute forme de suivi doit être explicitement divulguée et consentie."
-                  },
-                  {
-                      title: "Supervision Claire",
-                      description: "Si des analyses ou un suivi sont utilisés (pour la sécurité, la prévention du spam ou le débogage), ils sont documentés de manière transparente et limités dans leur portée."
-                  },
-                  {
-                      title: "Visibilité Contrôlée par l'Utilisateur",
-                      description: "Les utilisateurs peuvent facilement ajuster les paramètres de visibilité de leurs profils et contenus pour gérer leur propre confidentialité."
-                  }
-              ]
-          },
-          {
-              title: "Protection contre les Discours Haineux",
-              principles: [
-                  {
-                      title: "Politique de Tolérance Zéro",
-                      description: "Les politiques interdisent explicitement les discours haineux, le harcèlement et la violence ciblée, avec des actions de modération rapides et transparentes."
-                  },
-                  {
-                      title: "Système de Signalement Accessible",
-                      description: "Un système simple et accessible permet aux utilisateurs de signaler les contenus préjudiciables pour examen."
-                  },
-                  {
-                      title: "Normes Communautaires Claires",
-                      description: "Des définitions et exemples clairs de contenus préjudiciables sont publiés publiquement, afin que les utilisateurs comprennent ce qui est permis et ce qui ne l'est pas."
-                  }
-              ]
-          },
-          {
-              title: "Protection Renforcée des Communautés Vulnérables",
-              principles: [
-                  {
-                      title: "Politiques de Modération Inclusives",
-                      description: "Les équipes de modération sont formées pour reconnaître et traiter les contenus ciblant la race, l'ethnicité, le genre, l'orientation sexuelle, le handicap, la religion ou d'autres identités marginalisées."
-                  },
-                  {
-                      title: "Approche Intersectionnelle",
-                      description: "Les règles et protocoles d'application prennent en compte les vulnérabilités qui se chevauchent et amplifient les impacts néfastes."
-                  },
-                  {
-                      title: "Support Réactif",
-                      description: "Des canaux dédiés existent pour permettre aux utilisateurs de contacter rapidement la plateforme s'ils se sentent menacés ou en danger."
-                  }
-              ]
-          },
-          {
-              title: "Portabilité des Données et Autonomie des Utilisateurs",
-              principles: [
-                  {
-                      title: "Exportation Facile",
-                      description: "Les utilisateurs ont le droit de télécharger ou d'exporter leurs données à tout moment, dans un format courant."
-                  },
-                  {
-                      title: "Droit à la Suppression",
-                      description: "Sur demande, les données d'un utilisateur seront définitivement supprimées de la plateforme, sous réserve d'exceptions légales ou de sécurité."
-                  },
-                  {
-                      title: "Décentralisé et Interopérable",
-                      description: "Dans la mesure du possible, la plateforme prend en charge des protocoles et des normes ouverts pour permettre aux utilisateurs de migrer et de se connecter à différents services."
-                  }
-              ]
-          },
-          {
-              title: "Transparence et Responsabilité",
-              principles: [
-                  {
-                      title: "Gouvernance Ouverte",
-                      description: "Les politiques et processus de gouvernance de la plateforme sont ouverts, avec des consultations régulières de la communauté et une supervision."
-                  },
-                  {
-                      title: "Feuilles de Route Publiques",
-                      description: "Les modifications des politiques ou de la technologie de la plateforme sont rendues publiques, et les parties prenantes peuvent commenter ou proposer des modifications."
-                  },
-                  {
-                      title: "Supervision Indépendante",
-                      description: "Un organisme impartial ou un groupe consultatif peut auditer ou examiner les pratiques de modération et de gestion des données pour s'assurer qu'elles répondent à des normes éthiques élevées."
-                  }
-              ]
-          },
-          {
-              title: "Sécurité et Bien-être",
-              principles: [
-                  {
-                      title: "Avertissements de Contenu et Outils de Modération",
-                      description: "Des outils robustes permettent aux utilisateurs de se protéger des contenus perturbants ou préjudiciables grâce à des avertissements et des listes de filtrage."
-                  },
-                  {
-                      title: "Ressources en Santé Mentale",
-                      description: "La plateforme partage des ressources et des lignes d'assistance pour le soutien en santé mentale afin de favoriser un environnement en ligne plus sain."
-                  },
-                  {
-                      title: "Prévention des Préjudices Numériques",
-                      description: "Des mesures proactives comme les limites de débit et une friction réfléchie contrecarrent les schémas addictifs, le spam et les abus."
-                  }
-              ]
-          },
-          {
-              title: "Équité dans les Systèmes Algorithmiques",
-              principles: [
-                  {
-                      title: "Fils d'Actualité Explicables",
-                      description: "Si un fil d'actualité ou des résultats de recherche sont organisés de manière algorithmique, les utilisateurs méritent des explications compréhensibles des principaux facteurs de classement."
-                  },
-                  {
-                      title: "Option de Désactivation",
-                      description: "Les utilisateurs peuvent sélectionner un fil chronologique ou une autre vue simplifiée s'ils ne souhaitent pas interagir avec les recommandations algorithmiques."
-                  },
-                  {
-                      title: "Atténuation des Biais",
-                      description: "Des audits réguliers garantissent que les algorithmes ne suppriment ni n'amplifient de manière disproportionnée le contenu basé sur des caractéristiques protégées."
-                  }
-              ]
-          },
-          {
-              title: "Communauté et Gouvernance Inclusives",
-              principles: [
-                  {
-                      title: "Représentation Équitable",
-                      description: "Les règles et le leadership de la communauté doivent refléter des voix et des expériences diverses."
-                  },
-                  {
-                      title: "Accessibilité Linguistique",
-                      description: "Les politiques principales, les guides d'aide et les directives de modération sont disponibles en plusieurs langues, selon les ressources disponibles."
-                  },
-                  {
-                      title: "Développement Collaboratif des Politiques",
-                      description: "Les utilisateurs sont encouragés à participer aux discussions sur les politiques et à contribuer à l'évolution continue de la plateforme."
-                  }
-              ]
-          },
-          {
-              title: "Amélioration et Évolution Continues",
-              principles: [
-                  {
-                      title: "Révision Périodique",
-                      description: "La Charte des Droits, les politiques et les stratégies de mise en œuvre sont régulièrement révisées et mises à jour pour répondre aux évolutions sociales et technologiques."
-                  },
-                  {
-                      title: "Retours de la Communauté",
-                      description: "Des mécanismes existent pour permettre aux utilisateurs de soumettre des commentaires, des suggestions ou des préoccupations, garantissant que la plateforme reste réactive à sa communauté."
-                  },
-                  {
-                      title: "Responsabilité Partagée",
-                      description: "Tous les participants — utilisateurs, mainteneurs et contributeurs externes — partagent la responsabilité de faire respecter ces principes."
-                  }
-              ]
-          }
+            {
+                title: "Droit à la Vie Privée",
+                principles: [
+                    {
+                        title: "Minimisation des Données",
+                        description: "Seules les données nécessaires aux fonctionnalités essentielles sont collectées. Les plateformes doivent justifier la nécessité de chaque donnée recueillie."
+                    },
+                    {
+                        title: "Consentement Explicite",
+                        description: "Les utilisateurs doivent donner leur consentement éclairé avant que toute donnée personnelle ne soit collectée, stockée ou partagée avec des tiers. Le consentement doit être donné librement, être spécifique et révocable."
+                    },
+                    {
+                        title: "Confidentialité dès la Conception",
+                        description: "Les fonctionnalités et les mises à jour de la plateforme sont développées avec la confidentialité des utilisateurs comme paramètre par défaut, empêchant toute exposition inutile des données."
+                    }
+                ]
+            },
+            {
+                title: "Protection contre la Surveillance",
+                principles: [
+                    {
+                        title: "Pas de Suivi Non Consensuel",
+                        description: "Les utilisateurs ne sont pas secrètement surveillés ou suivis sur Internet. Toute forme de suivi doit être explicitement divulguée et consentie."
+                    },
+                    {
+                        title: "Supervision Claire",
+                        description: "Si des analyses ou un suivi sont utilisés (pour la sécurité, la prévention du spam ou le débogage), ils sont documentés de manière transparente et limités dans leur portée."
+                    },
+                    {
+                        title: "Visibilité Contrôlée par l'Utilisateur",
+                        description: "Les utilisateurs peuvent facilement ajuster les paramètres de visibilité de leurs profils et contenus pour gérer leur propre confidentialité."
+                    }
+                ]
+            },
+            {
+                title: "Protection contre les Discours Haineux",
+                principles: [
+                    {
+                        title: "Politique de Tolérance Zéro",
+                        description: "Les politiques interdisent explicitement les discours haineux, le harcèlement et la violence ciblée, avec des actions de modération rapides et transparentes."
+                    },
+                    {
+                        title: "Système de Signalement Accessible",
+                        description: "Un système simple et accessible permet aux utilisateurs de signaler les contenus préjudiciables pour examen."
+                    },
+                    {
+                        title: "Normes Communautaires Claires",
+                        description: "Des définitions et exemples clairs de contenus préjudiciables sont publiés publiquement, afin que les utilisateurs comprennent ce qui est permis et ce qui ne l'est pas."
+                    }
+                ]
+            },
+            {
+                title: "Protection Renforcée des Communautés Vulnérables",
+                principles: [
+                    {
+                        title: "Politiques de Modération Inclusives",
+                        description: "Les équipes de modération sont formées pour reconnaître et traiter les contenus ciblant la race, l'ethnicité, le genre, l'orientation sexuelle, le handicap, la religion ou d'autres identités marginalisées."
+                    },
+                    {
+                        title: "Approche Intersectionnelle",
+                        description: "Les règles et protocoles d'application prennent en compte les vulnérabilités qui se chevauchent et amplifient les impacts néfastes."
+                    },
+                    {
+                        title: "Support Réactif",
+                        description: "Des canaux dédiés existent pour permettre aux utilisateurs de contacter rapidement la plateforme s'ils se sentent menacés ou en danger."
+                    }
+                ]
+            },
+            {
+                title: "Portabilité des Données et Autonomie des Utilisateurs",
+                principles: [
+                    {
+                        title: "Exportation Facile",
+                        description: "Les utilisateurs ont le droit de télécharger ou d'exporter leurs données à tout moment, dans un format courant."
+                    },
+                    {
+                        title: "Droit à la Suppression",
+                        description: "Sur demande, les données d'un utilisateur seront définitivement supprimées de la plateforme, sous réserve d'exceptions légales ou de sécurité."
+                    },
+                    {
+                        title: "Décentralisé et Interopérable",
+                        description: "Dans la mesure du possible, la plateforme prend en charge des protocoles et des normes ouverts pour permettre aux utilisateurs de migrer et de se connecter à différents services."
+                    }
+                ]
+            },
+            {
+                title: "Transparence et Responsabilité",
+                principles: [
+                    {
+                        title: "Gouvernance Ouverte",
+                        description: "Les politiques et processus de gouvernance de la plateforme sont ouverts, avec des consultations régulières de la communauté et une supervision."
+                    },
+                    {
+                        title: "Feuilles de Route Publiques",
+                        description: "Les modifications des politiques ou de la technologie de la plateforme sont rendues publiques, et les parties prenantes peuvent commenter ou proposer des modifications."
+                    },
+                    {
+                        title: "Supervision Indépendante",
+                        description: "Un organisme impartial ou un groupe consultatif peut auditer ou examiner les pratiques de modération et de gestion des données pour s'assurer qu'elles répondent à des normes éthiques élevées."
+                    }
+                ]
+            },
+            {
+                title: "Sécurité et Bien-être",
+                principles: [
+                    {
+                        title: "Avertissements de Contenu et Outils de Modération",
+                        description: "Des outils robustes permettent aux utilisateurs de se protéger des contenus perturbants ou préjudiciables grâce à des avertissements et des listes de filtrage."
+                    },
+                    {
+                        title: "Ressources en Santé Mentale",
+                        description: "La plateforme partage des ressources et des lignes d'assistance pour le soutien en santé mentale afin de favoriser un environnement en ligne plus sain."
+                    },
+                    {
+                        title: "Prévention des Préjudices Numériques",
+                        description: "Des mesures proactives comme les limites de débit et une friction réfléchie contrecarrent les schémas addictifs, le spam et les abus."
+                    }
+                ]
+            },
+            {
+                title: "Équité dans les Systèmes Algorithmiques",
+                principles: [
+                    {
+                        title: "Fils d'Actualité Explicables",
+                        description: "Si un fil d'actualité ou des résultats de recherche sont organisés de manière algorithmique, les utilisateurs méritent des explications compréhensibles des principaux facteurs de classement."
+                    },
+                    {
+                        title: "Option de Désactivation",
+                        description: "Les utilisateurs peuvent sélectionner un fil chronologique ou une autre vue simplifiée s'ils ne souhaitent pas interagir avec les recommandations algorithmiques."
+                    },
+                    {
+                        title: "Atténuation des Biais",
+                        description: "Des audits réguliers garantissent que les algorithmes ne suppriment ni n'amplifient de manière disproportionnée le contenu basé sur des caractéristiques protégées."
+                    }
+                ]
+            },
+            {
+                title: "Communauté et Gouvernance Inclusives",
+                principles: [
+                    {
+                        title: "Représentation Équitable",
+                        description: "Les règles et le leadership de la communauté doivent refléter des voix et des expériences diverses."
+                    },
+                    {
+                        title: "Accessibilité Linguistique",
+                        description: "Les politiques principales, les guides d'aide et les directives de modération sont disponibles en plusieurs langues, selon les ressources disponibles."
+                    },
+                    {
+                        title: "Développement Collaboratif des Politiques",
+                        description: "Les utilisateurs sont encouragés à participer aux discussions sur les politiques et à contribuer à l'évolution continue de la plateforme."
+                    }
+                ]
+            },
+            {
+                title: "Amélioration et Évolution Continues",
+                principles: [
+                    {
+                        title: "Révision Périodique",
+                        description: "La Charte des Droits, les politiques et les stratégies de mise en œuvre sont régulièrement révisées et mises à jour pour répondre aux évolutions sociales et technologiques."
+                    },
+                    {
+                        title: "Retours de la Communauté",
+                        description: "Des mécanismes existent pour permettre aux utilisateurs de soumettre des commentaires, des suggestions ou des préoccupations, garantissant que la plateforme reste réactive à sa communauté."
+                    },
+                    {
+                        title: "Responsabilité Partagée",
+                        description: "Tous les participants — utilisateurs, mainteneurs et contributeurs externes — partagent la responsabilité de faire respecter ces principes."
+                    }
+                ]
+            }
         ];
 
         const pledges = [
             {
-              name: "NextGraph.org",
-              date: "Jan 13, 2025",
-              website: "https://NextGraph.org",
-              statement: "NextGraph.org is committed to data portability at its core, as it even goes further and beyond federation, for a truly decentralized network. It does guarantee perfect privacy as everything is encrypted end to end. The upcoming work on implementing a social platform we have planned, will uphold the principles listed in the Digital Platform Charter of Rights, as we strongly support diversity, minority communities and safety for everyone."
+                name: "NextGraph.org",
+                date: "Jan 13, 2025",
+                website: "https://NextGraph.org",
+                statement: "NextGraph.org is committed to data portability at its core, as it even goes further and beyond federation, for a truly decentralized network. It does guarantee perfect privacy as everything is encrypted end to end. The upcoming work on implementing a social platform we have planned, will uphold the principles listed in the Digital Platform Charter of Rights, as we strongly support diversity, minority communities and safety for everyone."
             },
             {
-              name: "Emissary",
-              date: "Jan 18, 2025",
-              website: "https://emissary.dev",
-              statement: "Emissary is a toolkit for building social applications on the open web. My goal from its inception has been to create a fundamentally respectful, responsible technology stack that anyone can use to launch their own platforms.  I'm excited to see this Respectful Platforms initiative codifying these basic principles of human-first, accessible, and responsible design, and will strive to implement these values in Emissary, and every future app that uses Emissary at its core."
+                name: "Emissary",
+                date: "Jan 18, 2025",
+                website: "https://emissary.dev",
+                statement: "Emissary is a toolkit for building social applications on the open web. My goal from its inception has been to create a fundamentally respectful, responsible technology stack that anyone can use to launch their own platforms.  I'm excited to see this Respectful Platforms initiative codifying these basic principles of human-first, accessible, and responsible design, and will strive to implement these values in Emissary, and every future app that uses Emissary at its core."
             },
         ];
 
         function createArticleElement(article, index) {
             const articleElement = document.createElement('div');
             articleElement.className = 'mb-8 bg-white dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-600 overflow-hidden';
-            
+
             const articleHTML = `
                 <button class="w-full px-6 py-4 flex items-center justify-between bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-600 hover:bg-gray-100 hover:dark:bg-slate-700 transition-colors">
                     <div class="flex items-center space-x-4">
@@ -316,18 +329,18 @@
                     </div>
                 </div>
             `;
-            
+
             articleElement.innerHTML = articleHTML;
-            
+
             const button = articleElement.querySelector('button');
             const content = articleElement.querySelector('.article-content');
             const chevron = articleElement.querySelector('.chevron');
-            
+
             button.addEventListener('click', () => {
                 content.classList.toggle('expanded');
                 chevron.classList.toggle('expanded');
             });
-            
+
             return articleElement;
         }
 
@@ -362,10 +375,11 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-          initializeCharter();
-          displayPledges();
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeCharter();
+            displayPledges();
         });
     </script>
 </body>
+
 </html>
