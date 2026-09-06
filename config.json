@@ -25,6 +25,11 @@
       "name": "Español",
       "flag": "🇪🇸",
       "path": "/lang/es/"
+    },
+    "de": {
+      "name": "Deutsch",
+      "flag": "🇩🇪",
+      "path": "/lang/de/"
     }
   },
   "site": {
